@@ -1,24 +1,24 @@
 window.sr = ScrollReveal();
 sr.reveal('.navbar', {
-    duration:2500,
+    duration:2000,
     origin:'bottom'
 });
 
 sr.reveal('.showcase-left',{
-    duration:2500,
+    duration:2000,
     origin:'top',
     distance:'400px'
 });
 
 sr.reveal('.showcase-right',{
-    duration:2500,
+    duration:2000,
     origin:'right',
     distance:'400px'
 });
 
 
 sr.reveal('.showcase-btn',{
-    duration:2500,
+    duration:2000,
     delay:2000,
     origin:'bottom',
   
@@ -27,7 +27,7 @@ sr.reveal('.showcase-btn',{
 
 
 sr.reveal('#testimonial div',{
-    duration:2500,
+    duration:2000,
     origin:'bottom',
   
 });
@@ -35,19 +35,19 @@ sr.reveal('#testimonial div',{
 
 
 sr.reveal('.info-left',{
-    duration:2500,
+    duration:2000,
     origin:'left',
     distance:'400px',
-    viewFactor:0.3
+    viewFactor:0.2
   
 });
 
 
 sr.reveal('.info-right',{
-    duration:2500,
+    duration:2000,
     origin:'right',
     distance:'400px',
-    viewFactor:0.3
+    viewFactor:0.2
   
 });
 
