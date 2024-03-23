@@ -7,13 +7,13 @@ sr.reveal('.navbar', {
 sr.reveal('.showcase-left',{
     duration:2000,
     origin:'top',
-    // distance:'300px'
+    distance:'400px'
 });
 
 sr.reveal('.showcase-right',{
     duration:2000,
-    origin:'right',
-    // distance:'300px'
+    origin:'top',
+    distance:'400px'
 });
 
 
@@ -36,8 +36,8 @@ sr.reveal('#testimonial div',{
 
 sr.reveal('.info-left',{
     duration:2000,
-    origin:'left',
-    // distance:'300px',
+    origin:'bottom',
+    distance:'400px',
     viewFactor:0.2
   
 });
@@ -45,8 +45,8 @@ sr.reveal('.info-left',{
 
 sr.reveal('.info-right',{
     duration:2000,
-    origin:'right',
-    // distance:'300px',
+    origin:'bottom',
+    distance:'400px',
     viewFactor:0.2
   
 });
