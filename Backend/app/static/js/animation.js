@@ -7,13 +7,13 @@ sr.reveal('.navbar', {
 sr.reveal('.showcase-left',{
     duration:2000,
     origin:'top',
-    distance:'400px'
+    distance:'200px'
 });
 
 sr.reveal('.showcase-right',{
     duration:2000,
     origin:'right',
-    distance:'400px'
+    distance:'200px'
 });
 
 
@@ -37,7 +37,7 @@ sr.reveal('#testimonial div',{
 sr.reveal('.info-left',{
     duration:2000,
     origin:'left',
-    distance:'400px',
+    distance:'200px',
     viewFactor:0.2
   
 });
@@ -46,7 +46,7 @@ sr.reveal('.info-left',{
 sr.reveal('.info-right',{
     duration:2000,
     origin:'right',
-    distance:'400px',
+    distance:'200px',
     viewFactor:0.2
   
 });
@@ -54,19 +54,19 @@ sr.reveal('.info-right',{
 
 
 
-$(function(){
-    $('a[href*="#"]:not([href="#"])').click(
-        function(){
-            if(location.pathname.replace(/^\//,'')==this.pathname.replace(/^\//,'') && location.pathname == this.hostname){
-                var target = $(this.hash);
-                target = target.length ? target: $('[name='+this.hash.slice(1)+']');
-                if(target.length){
-                    $('html', 'body').animate({
-                        scrollTop: target.offset().top
-                    },1000);
-                    return false;
-                }
-            }
-        }
-    );
-});
+// $(function(){
+//     $('a[href*="#"]:not([href="#"])').click(
+//         function(){
+//             if(location.pathname.replace(/^\//,'')==this.pathname.replace(/^\//,'') && location.pathname == this.hostname){
+//                 var target = $(this.hash);
+//                 target = target.length ? target: $('[name='+this.hash.slice(1)+']');
+//                 if(target.length){
+//                     $('html', 'body').animate({
+//                         scrollTop: target.offset().top
+//                     },1000);
+//                     return false;
+//                 }
+//             }
+//         }
+//     );
+// });

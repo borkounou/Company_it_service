@@ -77,10 +77,6 @@ p{
 }
 
 
-#info2 img{
-    /* width: 100%; */
-   
-}
 
 #contact{
     background: url(../img/img1.jpg);
@@ -99,7 +95,6 @@ p{
 
 #service img{
     height: 20rem;
-    /* width: 90%; */
 }
 
 #service .card{
