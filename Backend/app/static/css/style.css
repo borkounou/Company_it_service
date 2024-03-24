@@ -122,3 +122,41 @@ p{
 footer{
     padding: 40px;
 }
+
+
+
+.form-container{
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.form-container h4{
+    margin-bottom: 2rem;
+}
+
+
+.form-control{
+    padding: 0.8rem 0.7rem;
+
+}
+form{
+    background-color: #fff;
+    border-radius: 2rem;
+}
+
+.form-group{
+    margin:1.5rem;
+  
+}
+
+.submit-button{
+   
+    font-size: 2rem;
+    background: #DDDDDD;
+    border: 0;
+  
+}
