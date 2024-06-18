@@ -1,0 +1,4 @@
+# Command to execute the project local:
+
+- CD to app folder and type this command:
+   - uvicorn main:app --reload 
