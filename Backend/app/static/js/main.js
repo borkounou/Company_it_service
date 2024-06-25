@@ -124,3 +124,20 @@
     
 })(jQuery);
 
+
+// $(document).ready(function() {
+//     // Remove 'active' class from all nav links and add to the clicked one
+//     $('.navbar-nav .nav-link').on('click', function() {
+//         $('.navbar-nav .nav-link').removeClass('active');
+//         $(this).addClass('active');
+//     });
+
+//     // Set the 'active' class based on the current URL
+//     var currentPath = window.location.pathname;
+//     $('.navbar-nav .nav-link').each(function() {
+//         if ($(this).attr('href') === currentPath) {
+//             $(this).addClass('active');
+//         }
+//     });
+// });
+
