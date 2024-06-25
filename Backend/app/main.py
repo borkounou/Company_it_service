@@ -40,3 +40,27 @@ async def blog(request: Request):
 @app.get("/detail", response_class=HTMLResponse)
 async def detail(request: Request):
     return templates.TemplateResponse("detail.html", {"request":request})
+
+@app.get("/contact", response_class=HTMLResponse)
+async def contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request":request})
+
+@app.get("/pages/price", response_class=HTMLResponse)
+async def price(request: Request):
+    return templates.TemplateResponse("price.html", {"request":request})
+
+@app.get("/pages/feature", response_class=HTMLResponse)
+async def feature(request: Request):
+    return templates.TemplateResponse("feature.html", {"request":request})
+
+@app.get("/pages/team", response_class=HTMLResponse)
+async def team(request: Request):
+    return templates.TemplateResponse("team.html", {"request":request})
+
+@app.get("/pages/testimonial", response_class=HTMLResponse)
+async def testimonial(request: Request):
+    return templates.TemplateResponse("testimonial.html", {"request":request})
+
+@app.get("/pages/quote", response_class=HTMLResponse)
+async def quote(request: Request):
+    return templates.TemplateResponse("quote.html", {"request":request})
