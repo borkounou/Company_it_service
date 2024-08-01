@@ -75,8 +75,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="{{https_url_for(request,'index')}}" {% if current == "index" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}  >Home</a>
-                        <a href="{{https_url_for(request,'about')}}" {% if current == "about" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>About</a>
+                        <a href="{{https_url_for(request,'index')}}" {% if current == "index" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}  >Accueil</a>
+                        <a href="{{https_url_for(request,'about')}}" {% if current == "about" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>À Propos</a>
                         <a href="{{https_url_for(request,'service')}}"{% if current == "service" %} class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>Services</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" {% if current == "blog" or current == "detail"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %} data-bs-toggle="dropdown">Blog</a>
