@@ -150,6 +150,10 @@ h6,
     color: #FFFFFF;
 }
 
+.navbar-dark .navbar-brand h4 {
+    color: #FFFFFF;
+}
+
 .navbar-dark .navbar-toggler {
     color: var(--primary) !important;
     border-color: var(--primary) !important;
@@ -169,6 +173,10 @@ h6,
     }
 
     .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+
+    .navbar-dark .navbar-brand h4 {
         color: var(--primary);
     }
 }
@@ -210,6 +218,10 @@ h6,
     }
 
     .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h4{
         color: var(--primary);
     }
 }

@@ -1,0 +1,30 @@
+{
+    "name":"Emplois",
+    "posts":[
+        {
+            "id":"rd202411091",
+            "equipe": "Equipe Recherche & Developpement",
+            "date": "11/09/2024",
+            "titre":"Développeur expérimenté Interfaces et Reporting F/H",
+            "status":"FULL-TIME",
+            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement ! Afin de renforcer nos équipes sur la solution Oracle ERP Cloud, et en particulier sur le module Financials, nous recrutons des développeurs expérimentés pour la réalisation des interfaces et des rapports Après une formation initiale sur Oracle Cloud ERP et en particulier Oracle Integration Cloud, vous rejoindrez une équipe projet : intégré dans l’équipe Technique, vos missions seront les suivantes: Participer au cadrage et aux choix techniques, Réaliser la conception technique des interfaces et des rapports Réaliser le développement de ces éléments ainsi que les tests unitaires associés",
+            "qualifications": "",
+            "contenus": "Imaginez, transformez et impactez le monde positivement"
+
+        },
+
+        {
+            "id":"rd202411092",
+            "equipe": "Equipe Recherche & Developpement",
+            "date": "11/09/2024",
+            "titre":"Développeur expérimenté Interfaces et Reporting F/H",
+            "status":"FULL-TIME",
+            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement ! Afin de renforcer nos équipes sur la solution Oracle ERP Cloud, et en particulier sur le module Financials, nous recrutons des développeurs expérimentés pour la réalisation des interfaces et des rapports Après une formation initiale sur Oracle Cloud ERP et en particulier Oracle Integration Cloud, vous rejoindrez une équipe projet : intégré dans l’équipe Technique, vos missions seront les suivantes: Participer au cadrage et aux choix techniques, Réaliser la conception technique des interfaces et des rapports Réaliser le développement de ces éléments ainsi que les tests unitaires associés",
+            "qualifications": "",
+            "contenus": "Imaginez, transformez et impactez le monde positivement"
+
+        }
+
+
+    ]
+}

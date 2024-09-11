@@ -49,15 +49,7 @@
                         <small class="text-light"><i class="fa fa-envelope-open me-2"></i>contact@mahrasoft.com</small>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                    </div>
-                </div> -->
+
             </div>
         </div>
         <!-- Topbar End -->    
@@ -67,7 +59,9 @@
           <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
                 <a href="{{https_url_for(request,'index')}}" class="navbar-brand p-0">
-                    <h1 class="m-0">Mahrasoft</h1>
+                    <img src="/static/img/Logo-mahrasoft.jpg" alt="Logo" style="width:80px ;height: 40px;">
+                    
+                    <!-- <h1 class="m-0">Mahrasoft</h1> -->
                     <!-- <i class="fa fa-user-tie me-2"></i> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -78,23 +72,27 @@
                         <a href="{{https_url_for(request,'index')}}" {% if current == "index" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}  >Accueil</a>
                         <a href="{{https_url_for(request,'about')}}" {% if current == "about" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>À Propos</a>
                         <a href="{{https_url_for(request,'service')}}"{% if current == "service" %} class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>Services</a>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" {% if current == "blog" or current == "detail"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %} data-bs-toggle="dropdown">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#"{% if current == "valeurs" or current == "clients" or current == "strategie"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %}  data-bs-toggle="dropdown">Decouvrez Mahrasoft</a>
                             <div class="dropdown-menu m-0">
-                                <a href="{{https_url_for(request,'blog')}}" class="dropdown-item">Blog Grid</a>
-                                <a href="{{https_url_for(request,'detail')}}" class="dropdown-item">Blog Detail</a>
+                                <a href="/decouvrez/valeurs" class="dropdown-item">Nos valeurs</a>
+                                <a href="/decouvrez/clients" class="dropdown-item">Comment nous aidons nos clients</a>
+                                <a href="/decouvrez/strategie" class="dropdown-item">Stratégie & Conseil</a>
                             </div>
-                        </div> -->
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#"{% if current == "price" or current == "feature" or current == "team" or current == "testimonial" or current == "quote"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %}  data-bs-toggle="dropdown">Pages</a>
+                        </div>
+
+
+                        <div class="nav-item dropdown">
+                            <a href="#"{% if current == "rechercherpostuler" or current == "jeunediplomes" or current == "etudiants" or current == "formation" or current == "environnementdetravail"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %}  data-bs-toggle="dropdown">Carrières</a>
                             <div class="dropdown-menu m-0">
-                                <a href="/pages/price" class="dropdown-item">Pricing Plan</a>
-                                <a href="/pages/feature" class="dropdown-item">Our features</a>
-                                <a href="/pages/team" class="dropdown-item">Team Members</a>
-                                <a href="/pages/testimonial" class="dropdown-item">Testimonial</a>
-                                <a href="/pages/quote" class="dropdown-item">Free Quote</a>
+                                <a href="/carrieres/rechercherpostuler" class="dropdown-item">Rechercher et postuler</a>
+                                <a href="/carrieres/jeunediplomes" class="dropdown-item">Jeunes diplômés</a>
+                                <a href="/carrieres/etudiants" class="dropdown-item">Etudiants</a>
+                                <a href="/carrieres/formation" class="dropdown-item">Formation et développement de carrière</a>
+                                <a href="/carrieres/environnementdetravail" class="dropdown-item">Environnement de travail</a>
                             </div>
-                        </div> -->
+                        </div>
+          
                         <a href="{{https_url_for(request,'contact')}}" {% if current == "contact" %} class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>Contact</a>
                     </div>
                     <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
