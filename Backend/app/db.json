@@ -2,22 +2,25 @@
     "name":"Emplois",
     "posts":[
         {
-            "id": "1",
-            "titre": "Consultant Data Strat / Data Gov F/H",
+            "id": "RD20240911OF1",
+            "titre": "Ingénieur Fullstack – Développeur Web et Logiciel (H/F)",
             "equipe": "R & D",
-            "date": "6",
-            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement en tant que Consultant(e) Data Strategy / Data Governance.",
+            "date": " Septembre 2024",
+            "description": "Imaginez, transformez et impactez positivement le monde : venez vivre au cœur de l'innovation chez Mahrasoft Innovations ! Dans le cadre de notre croissance continue, nous recherchons un ingénieur fullstack talentueux et motivé pour rejoindre nos équipes. Vous travaillerez sur des projets innovants et variés, avec des technologies de pointe, tout en développant vos compétences techniques et professionnelles.",
 
             "content": {
               "mission": [
-                "Définir la stratégie data de grands groupes et accompagner leur transformation Data Driven",
-                "Définir et mettre en place une gouvernance de la donnée chez nos clients",
-                "Définir, construire et piloter des Data Offices et Data Factories chez nos clients",
-                "Accompagner le management de nos clients sur l’identification et le lancement de nouveaux cas d’usage utilisant l’analyse avancée de données",
-                "Participer à la définition et au développement de portefeuilles d’innovation et d’offres data en interne. Participer aux appels d’offres et propositions commerciales"
+        "Participer à la conception et au développement d'applications web et logicielles en utilisant Python et d'autres technologies modernes.",
+        "Concevoir et implémenter des solutions fullstack, de l’interface utilisateur à la base de données.",
+        "Collaborer avec les équipes techniques pour le cadrage des projets et les choix technologiques.",
+        "Développer des interfaces utilisateur efficaces et intuitives, tout en respectant les bonnes pratiques d’architecture logicielle.",
+        "Réaliser les tests unitaires, l’intégration continue et les tests de performance afin d’assurer la qualité et la robustesse des solutions.",
+        "Assurer la maintenance des applications et corriger les éventuelles anomalies.",
+        "Participer activement aux phases de validation de la solution, en collaboration avec les équipes projet.",
+        "Se former en continu aux nouvelles technologies et tendances du marché, tout en contribuant à l’amélioration continue des processus de développement."
               ],
-              "mission_paragraph": "Au sein des équipes Strategy & Consulting spécialisée en Data & IA, nous faisons en sorte qu’aucune mission ne se ressemble. Nous avons à cœur de vous proposer une diversité, que ce soit dans le type de clients ou dans le contenu des missions. Vous serez donc amené à :",
-              "about_us": "Accenture, c'est une communauté de plus de 730 000 talents et une mission commune : réaliser la promesse technologique alliée à l’ingéniosité humaine. Dans un monde en perpétuel changement, nous accélérons la transformation des plus grandes entreprises, de la stratégie à la réalisation des projets, à l’aide des technologies de demain et dynamisons leur croissance grâce à l'expertise multi-sectorielle de nos experts.",
+              "mission_paragraph": "Au sein des équipes de développement et d'innovation de Mahrasoft Innovations, nous veillons à ce que chaque projet soit unique. Nous nous engageons à vous offrir une diversité enrichissante, tant dans les types de clients que dans les missions sur lesquelles vous travaillerez. Vous serez ainsi amené à :",
+              "about_us": "Chez Mahrasoft Innovations, vous évoluerez dans un cadre de travail flexible, avec des possibilités de télétravail, favorisant ainsi l’équilibre entre vie professionnelle et personnelle. Nous vous encourageons à développer une carrière agile, grâce aux nombreuses opportunités de formation et aux retours d’expérience continus. Nous valorisons la diversité et recrutons sans distinction d’origine, de genre ou d’âge, avec une attention particulière pour les personnes en situation de handicap.",
               "additional_info": [
                 "Vous construisez une carrière agile, grâce à la formation, aux certifications et aux feedbacks reçus pour chacune de vos réalisations.",
                 "Vous évoluez dans un environnement de travail flexible qui vise à favoriser l’équilibre entre vie professionnelle et vie personnelle : le télétravail donne la possibilité d’adapter son rythme professionnel en fonction des actualités de l’équipe et du projet.",
@@ -25,11 +28,14 @@
               ]
             },
             "qualifications": [
-              "De formation supérieur Bac + 5",
-              "Vous avez le goût pour le métier de conseil et vous avez une vraie dimension humaine",
-              "Vous avez envie de travailler sur les sujets autours de la data, l’Ia, l’Analytic",
-              "Vous êtes curieux et avez l’envie d’entreprendre",
-              "Vous maîtrisez l’anglais à l’écrit comme à l’oral"
+                "Diplôme Bac +5 (ingénieur ou master) en informatique, développement logiciel ou un domaine connexe.",
+                "Maîtrise de Python et de ses frameworks (Django, Flask) pour le développement web.",
+                "Solide expérience en développement web front-end (HTML, CSS, JavaScript, frameworks comme React, Angular ou Vue.js).",
+                "Bonne connaissance des bases de données relationnelles et non-relationnelles (MySQL, PostgreSQL, MongoDB).",
+                "Compétence en développement logiciel et architectures distribuées.",
+                "Curiosité pour les nouvelles technologies et forte envie d'apprendre (Docker, Kubernetes, DevOps, cloud computing, etc.).",
+                "Capacité à travailler en mode agile et en collaboration avec des équipes pluridisciplinaires.",
+                "Maîtrise de l'anglais technique, à l’écrit comme à l’oral."
             ]
           }
           
