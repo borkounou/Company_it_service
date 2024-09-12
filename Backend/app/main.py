@@ -73,6 +73,7 @@ async def team(request: Request):
 
 @app.get("/carrieres/rechercherpostuler", response_class=HTMLResponse)
 async def testimonial(request: Request):
+   
     return templates.TemplateResponse("rechercherpostuler.html", {"request":request, "current":"rechercherpostuler", "posts":posts})
 
 @app.get("/carrieres/job/{id}",response_class=HTMLResponse)

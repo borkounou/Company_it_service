@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{%block carousel%} 
+<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+    <div class="row py-5">
+        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+            <h1 class="display-4 text-white animated zoomIn">Nos offres d'emploi</h1>
+            <a href="" class="h5 text-white">Accueil</a>
+            <i class="far fa-circle text-white px-2"></i>
+            <a href="" class="h5 text-white">offre</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+<!-- Description Du Poste  -->
+ <!-- Qualifications -->
+
+ <!-- A propos de nous  -->
+
+ <!-- Egalité des chances face à l'emploi -->
+   
+
+{%block content%} 
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-8">
+                    <div class="mb-5">
+                        <h1 class="mb-4">{{ post['titre'] }}</h1>
+                        <h3 class="mb-4">Description Du Poste</h3>
+                        <p>{{ post['description'] }}</p>
+                        <h4 class="mb-4">Votre Mission:</h4>
+                        <p>{{ post['content']['mission_paragraph'] }}</p>
+                        <ul>
+                            {% for task in post['content']['mission'] %}
+                            <li>{{ task }}</li>
+                            {% endfor %}
+                        </ul>
+
+                          {% for element in post['content']['additional_info'] %}
+                            <p>{{element}}</p>
+                          {%endfor%}
+                 
+                        <h3 class="mb-4">Qualifications</h3>
+                        <ul>
+                            {% for qualification in post['qualifications'] %}
+                            <li>{{ qualification }}</li>
+                            {% endfor %}
+                        </ul>
+
+                        <h4 class="mb-4">A propos de nous </h4>
+
+                        <p>Accenture, c'est une communauté de plus de 730 000 talents et une mission commune : réaliser la promesse technologique alliée à l’ingéniosité humaine.    </p>
+                        <p>Dans un monde en perpétuel changement, nous accélérons la transformation des plus grandes entreprises, de la stratégie à la réalisation des projets, à l’aide des technologies de demain et dynamisons leur croissance grâce à l'expertise multi-sectorielle de nos experts.</p>
+                        <p>Nos recrutements sont fondés sur les compétences, sans distinction d’origine, d’âge, ou de genre et tous nos postes sont ouverts aux personnes en situation de handicap. </p>
+                    </div>
+                </div>
+                
+
+    
+                <!-- Sidebar Start -->
+                <div class="col-lg-4">
+
+                    <!-- Category Start -->
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Categories</h3>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Infos</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Dates importantes</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Actualités</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Annonces</a>
+                        </div>
+                    </div>
+                    <!-- Category End -->
+    
+    
+                    <!-- Image Start -->
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <img src="/static/img/blog-1.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                    <!-- Image End -->
+
+                    {%include "themes.html" %}
+    
+
+    
+                    <!-- Plain Text Start -->
+                    <div class="wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Annonces importantes</h3>
+                        </div>
+                        <div class="bg-light text-center" style="padding: 30px;">
+                            <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
+                            <a href="" class="btn btn-primary py-2 px-4">Lire la suite</a>
+                        </div>
+                    </div>
+                    <!-- Plain Text End -->
+                </div>
+                <!-- Sidebar End -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+{%endblock%}

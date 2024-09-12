@@ -2,29 +2,37 @@
     "name":"Emplois",
     "posts":[
         {
-            "id":"rd202411091",
-            "equipe": "Equipe Recherche & Developpement",
-            "date": "11/09/2024",
-            "titre":"Développeur expérimenté Interfaces et Reporting F/H",
-            "status":"FULL-TIME",
-            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement ! Afin de renforcer nos équipes sur la solution Oracle ERP Cloud, et en particulier sur le module Financials, nous recrutons des développeurs expérimentés pour la réalisation des interfaces et des rapports Après une formation initiale sur Oracle Cloud ERP et en particulier Oracle Integration Cloud, vous rejoindrez une équipe projet : intégré dans l’équipe Technique, vos missions seront les suivantes: Participer au cadrage et aux choix techniques, Réaliser la conception technique des interfaces et des rapports Réaliser le développement de ces éléments ainsi que les tests unitaires associés",
-            "qualifications": "",
-            "contenus": "Imaginez, transformez et impactez le monde positivement"
+            "id": "1",
+            "titre": "Consultant Data Strat / Data Gov F/H",
+            "equipe": "R & D",
+            "date": "6",
+            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement en tant que Consultant(e) Data Strategy / Data Governance.",
 
-        },
-
-        {
-            "id":"rd202411092",
-            "equipe": "Equipe Recherche & Developpement",
-            "date": "11/09/2024",
-            "titre":"Développeur expérimenté Interfaces et Reporting F/H",
-            "status":"FULL-TIME",
-            "description": "Imaginez, transformez et impactez le monde positivement : venez vivre au cœur du changement ! Afin de renforcer nos équipes sur la solution Oracle ERP Cloud, et en particulier sur le module Financials, nous recrutons des développeurs expérimentés pour la réalisation des interfaces et des rapports Après une formation initiale sur Oracle Cloud ERP et en particulier Oracle Integration Cloud, vous rejoindrez une équipe projet : intégré dans l’équipe Technique, vos missions seront les suivantes: Participer au cadrage et aux choix techniques, Réaliser la conception technique des interfaces et des rapports Réaliser le développement de ces éléments ainsi que les tests unitaires associés",
-            "qualifications": "",
-            "contenus": "Imaginez, transformez et impactez le monde positivement"
-
-        }
-
+            "content": {
+              "mission": [
+                "Définir la stratégie data de grands groupes et accompagner leur transformation Data Driven",
+                "Définir et mettre en place une gouvernance de la donnée chez nos clients",
+                "Définir, construire et piloter des Data Offices et Data Factories chez nos clients",
+                "Accompagner le management de nos clients sur l’identification et le lancement de nouveaux cas d’usage utilisant l’analyse avancée de données",
+                "Participer à la définition et au développement de portefeuilles d’innovation et d’offres data en interne. Participer aux appels d’offres et propositions commerciales"
+              ],
+              "mission_paragraph": "Au sein des équipes Strategy & Consulting spécialisée en Data & IA, nous faisons en sorte qu’aucune mission ne se ressemble. Nous avons à cœur de vous proposer une diversité, que ce soit dans le type de clients ou dans le contenu des missions. Vous serez donc amené à :",
+              "about_us": "Accenture, c'est une communauté de plus de 730 000 talents et une mission commune : réaliser la promesse technologique alliée à l’ingéniosité humaine. Dans un monde en perpétuel changement, nous accélérons la transformation des plus grandes entreprises, de la stratégie à la réalisation des projets, à l’aide des technologies de demain et dynamisons leur croissance grâce à l'expertise multi-sectorielle de nos experts.",
+              "additional_info": [
+                "Vous construisez une carrière agile, grâce à la formation, aux certifications et aux feedbacks reçus pour chacune de vos réalisations.",
+                "Vous évoluez dans un environnement de travail flexible qui vise à favoriser l’équilibre entre vie professionnelle et vie personnelle : le télétravail donne la possibilité d’adapter son rythme professionnel en fonction des actualités de l’équipe et du projet.",
+                "Nos recrutements sont fondés sur les compétences, sans distinction d’origine, d’âge, ou de genre et tous nos postes sont ouverts aux personnes en situation de handicap."
+              ]
+            },
+            "qualifications": [
+              "De formation supérieur Bac + 5",
+              "Vous avez le goût pour le métier de conseil et vous avez une vraie dimension humaine",
+              "Vous avez envie de travailler sur les sujets autours de la data, l’Ia, l’Analytic",
+              "Vous êtes curieux et avez l’envie d’entreprendre",
+              "Vous maîtrisez l’anglais à l’écrit comme à l’oral"
+            ]
+          }
+          
 
     ]
 }
