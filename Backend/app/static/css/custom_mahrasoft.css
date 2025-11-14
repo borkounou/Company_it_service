@@ -1,0 +1,459 @@
+/*
+ * ============================================================================
+ * Mahrasoft Innovations - Styles Personnalisés
+ * ============================================================================
+ * Version: 2.0.0
+ * Date: 2025
+ * Description: Styles CSS supplémentaires pour personnaliser facilement le site
+ * ============================================================================
+ */
+
+/* ============================================================================
+   VARIABLES PERSONNALISÉES
+   ============================================================================ */
+:root {
+    /* Couleurs Mahrasoft - Modifiez ici pour changer les couleurs globalement */
+    --mahrasoft-primary: #0066cc;
+    --mahrasoft-secondary: #5ba3e0;
+    --mahrasoft-sky: #87CEEB;
+    --mahrasoft-dark: #004a99;
+    
+    /* Espacements personnalisés */
+    --section-padding: 80px;
+    --card-padding: 30px;
+    
+    /* Animations */
+    --hover-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   ANIMATIONS PERSONNALISÉES
+   ============================================================================ */
+
+/* Animation de pulsation pour les boutons CTA */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Animation de flottement */
+@keyframes float-gentle {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float-gentle 3s ease-in-out infinite;
+}
+
+/* Animation de brillance */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent
+    );
+    animation: shine 3s infinite;
+}
+
+/* ============================================================================
+   COMPOSANTS PERSONNALISÉS
+   ============================================================================ */
+
+/* Badge moderne Mahrasoft */
+.badge-mahrasoft {
+    background: linear-gradient(135deg, var(--mahrasoft-primary), var(--mahrasoft-secondary));
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+    transition: var(--hover-transition);
+}
+
+.badge-mahrasoft:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
+}
+
+/* Bouton Mahrasoft Premium */
+.btn-mahrasoft-premium {
+    background: linear-gradient(135deg, var(--mahrasoft-primary) 0%, var(--mahrasoft-secondary) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--hover-transition);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-mahrasoft-premium::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-mahrasoft-premium:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-mahrasoft-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.4);
+}
+
+/* Card Premium Mahrasoft */
+.card-mahrasoft-premium {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--hover-transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-mahrasoft-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--mahrasoft-primary), var(--mahrasoft-sky));
+    transition: left 0.5s ease;
+}
+
+.card-mahrasoft-premium:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.15);
+    border-color: var(--mahrasoft-secondary);
+}
+
+.card-mahrasoft-premium:hover::before {
+    left: 0;
+}
+
+/* Section avec fond dégradé Mahrasoft */
+.section-gradient-mahrasoft {
+    background: linear-gradient(135deg, 
+        var(--mahrasoft-primary) 0%, 
+        var(--mahrasoft-secondary) 50%, 
+        var(--mahrasoft-sky) 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.section-gradient-mahrasoft::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.section-gradient-mahrasoft::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+/* ============================================================================
+   ICÔNES PERSONNALISÉES
+   ============================================================================ */
+
+/* Icône avec effet de rebond */
+.icon-bounce {
+    display: inline-block;
+    transition: var(--hover-transition);
+}
+
+.icon-bounce:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Icône tournante */
+.icon-rotate:hover {
+    transform: rotate(360deg);
+    transition: transform 0.6s ease;
+}
+
+/* ============================================================================
+   EFFETS DE TEXTE
+   ============================================================================ */
+
+/* Texte avec gradient Mahrasoft */
+.text-gradient-mahrasoft {
+    background: linear-gradient(135deg, var(--mahrasoft-primary), var(--mahrasoft-sky));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* Texte brillant */
+.text-shine {
+    background: linear-gradient(90deg,
+        var(--mahrasoft-primary) 0%,
+        var(--mahrasoft-sky) 50%,
+        var(--mahrasoft-primary) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 3s ease-in-out infinite;
+}
+
+@keyframes text-shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ============================================================================
+   BORDURES ET DIVIDERS
+   ============================================================================ */
+
+/* Bordure avec gradient */
+.border-gradient-mahrasoft {
+    border: 3px solid;
+    border-image: linear-gradient(135deg, var(--mahrasoft-primary), var(--mahrasoft-sky)) 1;
+}
+
+/* Divider élégant */
+.divider-mahrasoft {
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(90deg, var(--mahrasoft-primary), var(--mahrasoft-sky));
+    margin: 2rem auto;
+    border-radius: 2px;
+}
+
+/* ============================================================================
+   OVERLAYS
+   ============================================================================ */
+
+/* Overlay sombre */
+.overlay-dark {
+    position: relative;
+}
+
+.overlay-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.overlay-dark > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Overlay gradient */
+.overlay-gradient-mahrasoft {
+    position: relative;
+}
+
+.overlay-gradient-mahrasoft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 102, 204, 0.9) 0%, 
+        rgba(91, 163, 224, 0.9) 100%
+    );
+    z-index: 1;
+}
+
+.overlay-gradient-mahrasoft > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================================
+   UTILITAIRES
+   ============================================================================ */
+
+/* Centrage parfait */
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Pleine hauteur viewport */
+.vh-100-minus-nav {
+    min-height: calc(100vh - 80px);
+}
+
+/* Espacement personnalisé */
+.py-mahrasoft {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+/* ============================================================================
+   RESPONSIVE HELPERS
+   ============================================================================ */
+
+/* Cache sur mobile */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Cache sur desktop */
+@media (min-width: 768px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* ============================================================================
+   LOADING STATES
+   ============================================================================ */
+
+/* Skeleton loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* ============================================================================
+   DARK MODE (Optionnel - pour future implémentation)
+   ============================================================================ */
+@media (prefers-color-scheme: dark) {
+    /* À implémenter si nécessaire */
+}
+
+/* ============================================================================
+   ACCESSIBILITÉ
+   ============================================================================ */
+
+/* Focus visible pour l'accessibilité */
+*:focus-visible {
+    outline: 3px solid var(--mahrasoft-primary);
+    outline-offset: 2px;
+}
+
+/* Réduction des animations pour les utilisateurs qui le préfèrent */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================================
+   FIN DES STYLES PERSONNALISÉS
+   ============================================================================ */

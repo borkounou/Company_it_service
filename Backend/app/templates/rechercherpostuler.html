@@ -1,107 +1,423 @@
 {% extends "base.html" %}
 
-{%block carousel%} 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Nos offres d'emploi</h1>
-            <a href="" class="h5 text-white">Accueil</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">offre</a>
-        </div>
+{% block head_title %}Carrières - Mahrasoft Innovations | Emploi et Recrutement au Tchad{% endblock %}
+
+{% block carousel %}
+<!-- Page Header Modern -->
+<section class="page-header-modern" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); position: relative; overflow: hidden; padding: 120px 0 80px;">
+    <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
     </div>
-</div>
-{%endblock%}
-
-{%block content%} 
-   <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-
-                <!-- Blog list Start -->
-                <div class="col-lg-12">
-                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                        <h1 class="mb-0"> Rechercher une offre Mahrasoft Innovations</h1>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-down">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb justify-content-center" style="background: transparent;">
+                        <li class="breadcrumb-item"><a href="{{ https_url_for(request,'index') }}" class="text-white opacity-75">Accueil</a></li>
+                        <li class="breadcrumb-item text-white active">Carrières</li>
+                    </ol>
+                </nav>
+                <span class="badge bg-white text-primary mb-3 px-4 py-2 rounded-pill">
+                    <i class="bi bi-briefcase me-2"></i>Rejoignez-Nous
+                </span>
+                <h1 class="display-3 fw-bold text-white mb-3">Nos Offres d'Emploi</h1>
+                <p class="lead text-white opacity-90">
+                    Rejoignez une équipe passionnée qui transforme le paysage numérique du Tchad
+                </p>
+                <div class="hero-stats mt-5 d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="stat-item text-white">
+                        <h3 class="fw-bold mb-0">15+</h3>
+                        <p class="mb-0 opacity-75">Talents Recrutés</p>
                     </div>
-                    <div class="row g-5">
-
-
-                                    <!-- Search Form Start -->
-                                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control p-3" placeholder="Rechercher">
-                                            <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                                        </div>
-                                    </div>
-                                    <!-- Search Form End -->
-
-
-                        {% for post in posts %}
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <!-- Equipe R&D -->
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Equipe {{post.equipe}}</small>
-                                        <!-- Date de publication-->
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>publié {{post.date}} </small>
-                                    </div>
-                                    <!-- Titre de l'emploi-->
-                                    <h4 class="mb-3">{{post.titre}}</h4>
-                                    <p>{{post.description | safe}}</p>
-                                    <a class="text-uppercase" href="{{https_url_for(request,'job', id=post.id)}}">CONSULTER L'OFFRE <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        {%endfor%}
-
-
-  
-
-     
-          
-
-                   
-                        <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
-                            <nav aria-label="Page navigation">
-                              <ul class="pagination pagination-lg m-0">
-                                <li class="page-item disabled">
-                                  <a class="page-link rounded-0" href="#" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="bi bi-arrow-left"></i></span>
-                                  </a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link rounded-0" href="#" aria-label="Next">
-                                    <span aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </nav>
-                        </div>
+                    <div class="stat-item text-white">
+                        <h3 class="fw-bold mb-0">5+</h3>
+                        <p class="mb-0 opacity-75">Départements</p>
                     </div>
-
-                    <br>
-
-                    {% include "annonce_recrutement.html" %}
-
-             
+                    <div class="stat-item text-white">
+                        <h3 class="fw-bold mb-0">100%</h3>
+                        <p class="mb-0 opacity-75">Formation Continue</p>
+                    </div>
                 </div>
-                <!-- Blog list End -->
-
-                {%include "themes.html" %}
-
-      
-
             </div>
         </div>
     </div>
-    <!-- Blog End -->
+</section>
 
+<style>
+    .hero-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 20s infinite;
+    }
 
-    {%endblock%}
+    .shape-1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        left: -50px;
+        animation-delay: 0s;
+    }
+
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        right: -50px;
+        animation-delay: 5s;
+    }
+
+    .shape-3 {
+        width: 150px;
+        height: 150px;
+        bottom: -50px;
+        left: 30%;
+        animation-delay: 10s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-30px) rotate(180deg);
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Section Recherche et Filtres -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title-modern text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">CARRIÈRES</span>
+                    <h2 class="section-heading">Rechercher une Offre chez Mahrasoft Innovations</h2>
+                    <p class="section-description">
+                        Découvrez nos opportunités de carrière et rejoignez une entreprise qui valorise l'innovation, l'excellence et la croissance professionnelle.
+                    </p>
+                </div>
+
+                <!-- Barre de Recherche Avancée -->
+                <div class="job-search-card card-modern p-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-lg-5">
+                            <label class="form-label fw-semibold mb-2">Mots-clés</label>
+                            <div class="input-group input-group-modern">
+                                <input type="text" class="form-control form-control-modern" placeholder="Développeur, Designer, Chef de projet...">
+                                <button class="btn btn-primary-modern px-4">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <label class="form-label fw-semibold mb-2">Équipe</label>
+                            <select class="form-select form-control-modern">
+                                <option selected>Toutes les équipes</option>
+                                <option>Développement</option>
+                                <option>Design</option>
+                                <option>Gestion de Projet</option>
+                                <option>Formation</option>
+                                <option>Support Technique</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <label class="form-label fw-semibold mb-2">Type de contrat</label>
+                            <select class="form-select form-control-modern">
+                                <option selected>Tous les contrats</option>
+                                <option>CDI</option>
+                                <option>CDD</option>
+                                <option>Stage</option>
+                                <option>Freelance</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1">
+                            <button class="btn btn-outline-modern w-100 h-100">
+                                <i class="bi bi-funnel"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liste des Offres d'Emploi -->
+        <div class="row g-4">
+            {% for post in posts %}
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="job-card card-modern h-100">
+                    <div class="job-header p-4 border-bottom">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="job-badge">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill">
+                                    {{ post.equipe }}
+                                </span>
+                            </div>
+                            <div class="job-date text-muted small">
+                                <i class="bi bi-calendar me-1"></i>Publié {{ post.date }}
+                            </div>
+                        </div>
+                        <h3 class="job-title h4 fw-bold mb-3">
+                            <a href="{{ https_url_for(request,'job', id=post.id) }}" class="text-decoration-none text-dark">
+                                {{ post.titre }}
+                            </a>
+                        </h3>
+                        <div class="job-meta d-flex flex-wrap gap-3">
+                            <div class="d-flex align-items-center gap-1 text-muted small">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>N'Djamena, Tchad</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 text-muted small">
+                                <i class="bi bi-clock"></i>
+                                <span>Temps plein</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 text-muted small">
+                                <i class="bi bi-cash"></i>
+                                <span>Compétitif</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-content p-4">
+                        <div class="job-description mb-4">
+                            <p class="text-muted mb-0">
+                                {{ post.description | safe | truncate(200) }}
+                            </p>
+                        </div>
+                        
+                        <div class="job-skills mb-4">
+                            <h6 class="fw-semibold mb-2">Compétences recherchées :</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                {% for skill in post.skills|default(['Python', 'JavaScript', 'Communication'])|slice(3) %}
+                                <span class="badge bg-light text-dark px-3 py-2 border">{{ skill }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <div class="job-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ https_url_for(request,'job', id=post.id) }}" class="btn btn-primary-modern">
+                                <i class="bi bi-eye me-2"></i>Consulter l'offre
+                            </a>
+                            <div class="job-actions">
+                                <button class="btn btn-outline-modern btn-sm">
+                                    <i class="bi bi-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <!-- Aucune offre disponible -->
+            <div class="col-12" data-aos="fade-up">
+                <div class="empty-state card-modern text-center p-5">
+                    <div class="empty-icon mb-4">
+                        <i class="bi bi-briefcase display-1 text-muted opacity-25"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Aucune offre disponible</h3>
+                    <p class="text-muted mb-4">
+                        Il n'y a actuellement aucune offre d'emploi disponible. Revenez plus tard pour découvrir de nouvelles opportunités.
+                    </p>
+                    <a href="{{ https_url_for(request,'contact') }}" class="btn btn-primary-modern">
+                        <i class="bi bi-send me-2"></i>Déposer une candidature spontanée
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if posts %}
+        <nav class="job-pagination mt-5" data-aos="fade-up">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link rounded-pill me-2" href="#" tabindex="-1">
+                        <i class="bi bi-chevron-left"></i> Précédent
+                    </a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link rounded-circle mx-1" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link rounded-circle mx-1" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link rounded-circle mx-1" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link rounded-pill ms-2" href="#">
+                        Suivant <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Pourquoi Nous Rejoindre -->
+<section class="section-modern" style="background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="section-title-modern text-center mb-5" data-aos="fade-up">
+            <span class="section-subtitle">AVANTAGES</span>
+            <h2 class="section-heading">Pourquoi Travailler Chez Mahrasoft ?</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="benefit-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <div class="benefit-icon mx-auto mb-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-graph-up-arrow text-white fs-2"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Croissance Professionnelle</h4>
+                    <p class="text-muted mb-0">
+                        Programmes de formation continue, mentorat et opportunités d'évolution de carrière pour développer votre potentiel.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <div class="benefit-icon mx-auto mb-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-lightbulb text-white fs-2"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Projets Innovants</h4>
+                    <p class="text-muted mb-0">
+                        Travaillez sur des projets digitaux ambitieux qui transforment le paysage technologique du Tchad et de l'Afrique.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="benefit-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <div class="benefit-icon mx-auto mb-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-people text-white fs-2"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Culture d'Équipe</h4>
+                    <p class="text-muted mb-0">
+                        Environnement collaboratif, équipe jeune et dynamique, valeurs fortes d'intégrité et d'innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Recrutement -->
+<section class="section-modern" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); position: relative; overflow: hidden;">
+    <div class="cta-shapes">
+        <div class="cta-shape cta-shape-1"></div>
+        <div class="cta-shape cta-shape-2"></div>
+    </div>
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="display-5 fw-bold text-white mb-3">
+                    Vous ne trouvez pas l'offre idéale ?
+                </h2>
+                <p class="lead text-white mb-0 opacity-90">
+                    Envoyez-nous votre candidature spontanée. Nous sommes toujours à la recherche de talents passionnés pour rejoindre notre aventure.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                <a href="{{ https_url_for(request,'contact') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold">
+                    <i class="bi bi-send me-2"></i>Candidature Spontanée
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Annonce de Recrutement -->
+<section class="section-modern">
+    <div class="container">
+        {% include "annonce_recrutement.html" %}
+    </div>
+</section>
+
+<!-- Thèmes (Sidebar équivalent) -->
+<section class="section-modern" style="background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);">
+    <div class="container">
+        {% include "themes.html" %}
+    </div>
+</section>
+
+<style>
+    .job-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .job-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+        border-color: rgba(0, 102, 204, 0.2) !important;
+    }
+
+    .benefit-card {
+        transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+
+    .job-search-card {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border: 2px solid rgba(0, 102, 204, 0.1);
+    }
+
+    .cta-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .cta-shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cta-shape-1 {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        right: -100px;
+    }
+
+    .cta-shape-2 {
+        width: 300px;
+        height: 300px;
+        bottom: -150px;
+        left: -50px;
+    }
+
+    .empty-state {
+        border: 2px dashed rgba(0, 102, 204, 0.2);
+    }
+
+    .page-link {
+        border: none;
+        margin: 0 2px;
+    }
+
+    .page-link:hover {
+        background: #0066cc;
+        color: white;
+    }
+</style>
+{% endblock %}

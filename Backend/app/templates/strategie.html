@@ -1,80 +1,587 @@
 {% extends "base.html" %}
 
-{%block carousel%} 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Stratégie & Conseil</h1>
-            <a href="" class="h5 text-white">Accueil</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Stratégie & Conseil</a>
-        </div>
+{% block head_title %}Stratégie & Conseil - Mahrasoft Innovations | Transformation Digitale{% endblock %}
+
+{% block carousel %}
+<!-- Page Header -->
+<section class="page-header" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); padding: 100px 0 80px; position: relative; overflow: hidden;">
+    <div class="hero-shapes">
+        <div class="shape shape-1" style="position: absolute; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; top: -100px; right: -50px;"></div>
+        <div class="shape shape-2" style="position: absolute; width: 200px; height: 200px; background: rgba(255,255,255,0.05); border-radius: 50%; bottom: -50px; left: 10%;"></div>
     </div>
-</div>
-{%endblock%}
-   
-
-{%block content%} 
-
-
-    <!-- Quote Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-12">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Stratégie & Conseil</h5>
-                        <h1 class="mb-0">L'innovation commence ici</h1>
-                    </div>
-                    <!-- <div class="row gx-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Reply within 24 hours</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs telephone support</h5>
-                        </div>
-                    </div> -->
-                    <h5 class="fw-bold text-primary text-uppercase">Réinventer à Travers les Industries</h5>
-                    <p class="mb-4">Les avancées dans les technologies numériques, les données et l'intelligence artificielle transforment les industries au Tchad et au-delà. Ces changements bouleversent la manière dont les entreprises opèrent, créent de la valeur et se positionnent sur le marché. Chez Mahrasoft Innovations, nous aidons nos clients à saisir ces opportunités pour se réinventer de manière durable et efficace.</p>
-                    
-                    <h5 class="fw-bold text-primary text-uppercase">L'Approche Globale de la Réinvention</h5>
-                    <p class="mb-4">Pour survivre et prospérer dans un environnement économique incertain et en constante évolution, les entreprises doivent être agiles, innovantes et orientées vers le futur. Notre approche holistique couvre tous les aspects de l’entreprise — des processus internes à l’expérience client — afin de garantir une transformation totale et cohérente, qui accélère leur croissance.</p>
-                    
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h1 class="mb-0">Nos Services en Stratégie & Conseil</h1>
-                    
-                    </div>
-
-                    <h5 class="fw-bold text-primary text-uppercase">Transformation Numérique Intégrale</h5>
-                    <p class="mb-4">Nous guidons nos clients dans la mise en œuvre de stratégies numériques complètes pour moderniser leurs processus, augmenter leur efficacité opérationnelle et améliorer leur résilience.</p>
-
-
-                    <h5 class="fw-bold text-primary text-uppercase">Analyse des Données pour une Décision Stratégique</h5>
-                    <p class="mb-4">En exploitant la puissance des données et de l’IA, nous permettons aux entreprises de prendre des décisions éclairées, basées sur des insights réels, renforçant ainsi leur compétitivité.</p>
-
-
-                    <h5 class="fw-bold text-primary text-uppercase">Optimisation des Processus Métier</h5>
-                    <p class="mb-4">Grâce à nos solutions d’automatisation et d’amélioration continue, nous optimisons les processus pour réduire les coûts, améliorer la productivité et permettre une croissance durable.</p>
-
-
-                    <h5 class="fw-bold text-primary text-uppercase">Cybersécurité et Protection des Données</h5>
-                    <p class="mb-4">Nous fournissons une protection avancée pour les données et les infrastructures critiques, aidant les entreprises à prévenir les menaces et à répondre aux défis de sécurité numérique.</p>
-
-
-
-                    <h5 class="fw-bold text-primary text-uppercase">Innovation et Technologie Moderne</h5>
-                    <p class="mb-4">En intégrant les technologies émergentes comme l’IA, le cloud et l’IoT, nous facilitons l’adoption de solutions technologiques qui permettent à nos clients de rester à la pointe de l'innovation.</p>
-
-
-                    
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-down">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb justify-content-center" style="background: transparent;">
+                        <li class="breadcrumb-item"><a href="{{ https_url_for(request,'index') }}" class="text-white">Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="/decouvrez" class="text-white">Découvrez</a></li>
+                        <li class="breadcrumb-item text-white active">Stratégie & Conseil</li>
+                    </ol>
+                </nav>
+                <h1 class="display-3 fw-bold text-white mb-3">Stratégie & Conseil</h1>
+                <p class="lead text-white opacity-90 mb-4">
+                    Transformez votre vision en réalité avec nos solutions stratégiques innovantes
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <span class="badge bg-white text-primary px-4 py-2 rounded-pill">
+                        <i class="bi bi-lightbulb-fill me-2"></i>Innovation
+                    </span>
+                    <span class="badge bg-white text-primary px-4 py-2 rounded-pill">
+                        <i class="bi bi-graph-up-arrow me-2"></i>Croissance
+                    </span>
+                    <span class="badge bg-white text-primary px-4 py-2 rounded-pill">
+                        <i class="bi bi-shield-check me-2"></i>Sécurité
+                    </span>
                 </div>
-       
             </div>
         </div>
     </div>
-    <!-- Quote End -->
+</section>
+{% endblock %}
 
+{% block content %}
+<!-- Introduction Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="section-title-modern text-start">
+                    <span class="section-subtitle">NOTRE VISION</span>
+                    <h2 class="section-heading">L'Innovation Commence Ici</h2>
+                </div>
+                <p class="text-muted lead mb-4">
+                    Les avancées dans les technologies numériques, les données et l'intelligence artificielle transforment les industries au Tchad et au-delà.
+                </p>
+                <p class="text-muted mb-4">
+                    Ces changements bouleversent la manière dont les entreprises opèrent, créent de la valeur et se positionnent sur le marché. Chez <strong>Mahrasoft Innovations</strong>, nous aidons nos clients à saisir ces opportunités pour se réinventer de manière durable et efficace.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="stat-item d-flex align-items-center gap-3 p-3 rounded-3" style="background: #f9fafb; border: 2px solid #e5e7eb;">
+                        <div class="stat-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-people text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0 text-primary">30+</h5>
+                            <small class="text-muted">Clients Accompagnés</small>
+                        </div>
+                    </div>
+                    <div class="stat-item d-flex align-items-center gap-3 p-3 rounded-3" style="background: #f9fafb; border: 2px solid #e5e7eb;">
+                        <div class="stat-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-award text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0 text-primary">100%</h5>
+                            <small class="text-muted">Satisfaction Client</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="{{ https_url_for(request,'static', path='img/chooseus.jpeg') }}" 
+                         alt="Stratégie Mahrasoft" 
+                         class="img-fluid rounded-4 shadow-lg">
+                    <div class="position-absolute bottom-0 start-0 p-4 m-4 text-white rounded-4" style="background: linear-gradient(135deg, #0066cc, #5ba3e0); backdrop-filter: blur(10px);">
+                        <h4 class="fw-bold mb-1">Transformation</h4>
+                        <p class="mb-0 opacity-90">Digitale Complète</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    
+<!-- Approche Section -->
+<section class="section-modern" style="background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="approach-card p-5 rounded-4 h-100" style="background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-left: 5px solid #0066cc;">
+                    <div class="mb-4">
+                        <div class="icon-box" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-diagram-3 text-white fs-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="fw-bold mb-4">L'Approche Globale de la Réinvention</h3>
+                    <p class="text-muted mb-4">
+                        Pour survivre et prospérer dans un environnement économique incertain et en constante évolution, les entreprises doivent être <strong>agiles</strong>, <strong>innovantes</strong> et <strong>orientées vers le futur</strong>.
+                    </p>
+                    <p class="text-muted mb-0">
+                        Notre approche holistique couvre tous les aspects de l'entreprise — des processus internes à l'expérience client — afin de garantir une transformation totale et cohérente, qui accélère leur croissance.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="key-principles">
+                    <h4 class="fw-bold mb-4">Nos Principes Clés</h4>
+                    <div class="principle-item d-flex gap-3 mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="principle-icon" style="width: 50px; height: 50px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-bullseye text-primary fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Vision Stratégique</h5>
+                            <p class="text-muted mb-0">Définition claire des objectifs et alignement avec votre mission d'entreprise</p>
+                        </div>
+                    </div>
+                    <div class="principle-item d-flex gap-3 mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="principle-icon" style="width: 50px; height: 50px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-gear text-primary fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Exécution Méthodique</h5>
+                            <p class="text-muted mb-0">Mise en œuvre structurée avec suivi rigoureux des indicateurs de performance</p>
+                        </div>
+                    </div>
+                    <div class="principle-item d-flex gap-3 mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="principle-icon" style="width: 50px; height: 50px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-arrow-repeat text-primary fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Amélioration Continue</h5>
+                            <p class="text-muted mb-0">Adaptation constante aux évolutions du marché et de la technologie</p>
+                        </div>
+                    </div>
+                    <div class="principle-item d-flex gap-3">
+                        <div class="flex-shrink-0">
+                            <div class="principle-icon" style="width: 50px; height: 50px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-people text-primary fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Collaboration Active</h5>
+                            <p class="text-muted mb-0">Travail en partenariat étroit avec vos équipes pour un transfert de compétences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-{%endblock%}
+<!-- Services Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="section-title-modern" data-aos="fade-up">
+            <span class="section-subtitle">NOS SERVICES</span>
+            <h2 class="section-heading">Stratégie & Conseil</h2>
+            <p class="section-description">
+                Des solutions complètes pour accélérer votre transformation digitale
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-strategy-card h-100 p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #f0f0f0; transition: all 0.3s;">
+                    <div class="d-flex align-items-start gap-4">
+                        <div class="service-icon-large" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-globe text-white" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="fw-bold mb-3">Transformation Numérique Intégrale</h4>
+                            <p class="text-muted mb-4">
+                                Nous guidons nos clients dans la mise en œuvre de stratégies numériques complètes pour moderniser leurs processus, augmenter leur efficacité opérationnelle et améliorer leur résilience.
+                            </p>
+                            <div class="service-features">
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Audit digital complet</span>
+                                </div>
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Roadmap de transformation</span>
+                                </div>
+                                <div class="feature-tag">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Accompagnement au changement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-strategy-card h-100 p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #f0f0f0; transition: all 0.3s;">
+                    <div class="d-flex align-items-start gap-4">
+                        <div class="service-icon-large" style="width: 80px; height: 80px; background: linear-gradient(135deg, #5ba3e0, #87CEEB); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-graph-up-arrow text-white" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="fw-bold mb-3">Analyse des Données pour Décisions Stratégiques</h4>
+                            <p class="text-muted mb-4">
+                                En exploitant la puissance des données et de l'IA, nous permettons aux entreprises de prendre des décisions éclairées, basées sur des insights réels, renforçant ainsi leur compétitivité.
+                            </p>
+                            <div class="service-features">
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Business Intelligence</span>
+                                </div>
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Tableaux de bord interactifs</span>
+                                </div>
+                                <div class="feature-tag">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Modèles prédictifs IA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-strategy-card h-100 p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #f0f0f0; transition: all 0.3s;">
+                    <div class="d-flex align-items-start gap-4">
+                        <div class="service-icon-large" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-arrows-fullscreen text-white" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="fw-bold mb-3">Optimisation des Processus Métier</h4>
+                            <p class="text-muted mb-4">
+                                Grâce à nos solutions d'automatisation et d'amélioration continue, nous optimisons les processus pour réduire les coûts, améliorer la productivité et permettre une croissance durable.
+                            </p>
+                            <div class="service-features">
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Cartographie des processus</span>
+                                </div>
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Automatisation RPA</span>
+                                </div>
+                                <div class="feature-tag">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">KPIs et monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-strategy-card h-100 p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #f0f0f0; transition: all 0.3s;">
+                    <div class="d-flex align-items-start gap-4">
+                        <div class="service-icon-large" style="width: 80px; height: 80px; background: linear-gradient(135deg, #5ba3e0, #87CEEB); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-shield-lock text-white" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="fw-bold mb-3">Cybersécurité et Protection des Données</h4>
+                            <p class="text-muted mb-4">
+                                Nous fournissons une protection avancée pour les données et les infrastructures critiques, aidant les entreprises à prévenir les menaces et à répondre aux défis de sécurité numérique.
+                            </p>
+                            <div class="service-features">
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Audit de sécurité</span>
+                                </div>
+                                <div class="feature-tag mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Protection des données RGPD</span>
+                                </div>
+                                <div class="feature-tag">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <span class="small">Monitoring et réponse aux incidents</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-strategy-card p-5 rounded-4" style="background: linear-gradient(135deg, #0066cc, #5ba3e0); box-shadow: 0 20px 40px rgba(0,102,204,0.2);">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-2 text-center">
+                            <div class="service-icon-hero mx-auto" style="width: 100px; height: 100px; background: rgba(255,255,255,0.2); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-rocket-takeoff text-white" style="font-size: 3rem;"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="fw-bold text-white mb-3">Innovation et Technologie Moderne</h3>
+                            <p class="text-white mb-3 opacity-90">
+                                En intégrant les technologies émergentes comme l'IA, le cloud et l'IoT, nous facilitons l'adoption de solutions technologiques qui permettent à nos clients de rester à la pointe de l'innovation.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-white text-primary px-3 py-2">Intelligence Artificielle</span>
+                                <span class="badge bg-white text-primary px-3 py-2">Cloud Computing</span>
+                                <span class="badge bg-white text-primary px-3 py-2">Internet of Things</span>
+                                <span class="badge bg-white text-primary px-3 py-2">Blockchain</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-center">
+                            <a href="{{ https_url_for(request,'contact') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold">
+                                <i class="bi bi-chat-dots-fill me-2"></i>Nous Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Méthodologie Section -->
+<section class="section-modern" style="background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="section-title-modern" data-aos="fade-up">
+            <span class="section-subtitle">NOTRE MÉTHODOLOGIE</span>
+            <h2 class="section-heading">Un Processus Éprouvé</h2>
+            <p class="section-description">
+                4 étapes pour une transformation réussie
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="methodology-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
+                    <div class="step-number" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.75rem; box-shadow: 0 5px 15px rgba(0,102,204,0.3);">
+                        1
+                    </div>
+                    <div class="mt-5">
+                        <div class="methodology-icon mb-4 mx-auto" style="width: 90px; height: 90px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-search text-primary" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Diagnostic</h4>
+                        <p class="text-muted mb-0">
+                            Analyse approfondie de votre situation actuelle et identification des opportunités
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="methodology-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
+                    <div class="step-number" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.75rem; box-shadow: 0 5px 15px rgba(0,102,204,0.3);">
+                        2
+                    </div>
+                    <div class="mt-5">
+                        <div class="methodology-icon mb-4 mx-auto" style="width: 90px; height: 90px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-lightbulb text-primary" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Stratégie</h4>
+                        <p class="text-muted mb-0">
+                            Conception d'une feuille de route adaptée à vos objectifs et contraintes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="methodology-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
+                    <div class="step-number" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.75rem; box-shadow: 0 5px 15px rgba(0,102,204,0.3);">
+                        3
+                    </div>
+                    <div class="mt-5">
+                        <div class="methodology-icon mb-4 mx-auto" style="width: 90px; height: 90px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-gear text-primary" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Mise en Œuvre</h4>
+                        <p class="text-muted mb-0">
+                            Déploiement des solutions avec accompagnement de vos équipes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="methodology-card text-center p-4 rounded-4 h-100" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
+                    <div class="step-number" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.75rem; box-shadow: 0 5px 15px rgba(0,102,204,0.3);">
+                        4
+                    </div>
+                    <div class="mt-5">
+                        <div class="methodology-icon mb-4 mx-auto" style="width: 90px; height: 90px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-graph-up text-primary" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Optimisation</h4>
+                        <p class="text-muted mb-0">
+                            Suivi des performances et amélioration continue des résultats
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bénéfices Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="section-title-modern text-start">
+                    <span class="section-subtitle">BÉNÉFICES</span>
+                    <h2 class="section-heading">Pourquoi Choisir Mahrasoft ?</h2>
+                </div>
+                <p class="text-muted lead mb-4">
+                    Notre expertise et notre approche centrée sur les résultats garantissent une transformation réussie et durable.
+                </p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item d-flex align-items-start gap-3 mb-4 p-3 rounded-3" style="background: #f9fafb;">
+                        <div class="benefit-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-speedometer2 text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Amélioration de 50% de la Productivité</h5>
+                            <p class="text-muted mb-0 small">Optimisation des processus et automatisation des tâches répétitives</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item d-flex align-items-start gap-3 mb-4 p-3 rounded-3" style="background: #f9fafb;">
+                        <div class="benefit-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-cash-coin text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Réduction de 40% des Coûts</h5>
+                            <p class="text-muted mb-0 small">Efficacité opérationnelle et élimination des gaspillages</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item d-flex align-items-start gap-3 mb-4 p-3 rounded-3" style="background: #f9fafb;">
+                        <div class="benefit-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-shield-check text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Sécurité Renforcée</h5>
+                            <p class="text-muted mb-0 small">Protection complète de vos données et infrastructure</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item d-flex align-items-start gap-3 p-3 rounded-3" style="background: #f9fafb;">
+                        <div class="benefit-icon" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0066cc, #5ba3e0); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="bi bi-people text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Satisfaction Client Accrue</h5>
+                            <p class="text-muted mb-0 small">Expérience utilisateur améliorée et services plus rapides</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="stats-grid">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stat-card text-center p-4 rounded-4" style="background: linear-gradient(135deg, #0066cc, #5ba3e0); color: white; box-shadow: 0 10px 30px rgba(0,102,204,0.2);">
+                                <i class="bi bi-trophy fs-1 mb-3"></i>
+                                <h2 class="fw-bold mb-2">98%</h2>
+                                <p class="mb-0 opacity-90">Taux de Réussite</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                                <i class="bi bi-clock-history fs-1 mb-3 text-primary"></i>
+                                <h2 class="fw-bold mb-2 text-primary">24/7</h2>
+                                <p class="text-muted mb-0">Support Disponible</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center p-4 rounded-4" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                                <i class="bi bi-people fs-1 mb-3 text-primary"></i>
+                                <h2 class="fw-bold mb-2 text-primary">30+</h2>
+                                <p class="text-muted mb-0">Clients Accompagnés</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center p-4 rounded-4" style="background: linear-gradient(135deg, #5ba3e0, #87CEEB); color: white; box-shadow: 0 10px 30px rgba(91,163,224,0.2);">
+                                <i class="bi bi-award fs-1 mb-3"></i>
+                                <h2 class="fw-bold mb-2">5+</h2>
+                                <p class="mb-0 opacity-90">Années d'Expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="section-modern" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); position: relative; overflow: hidden;">
+    <div class="hero-shapes">
+        <div class="shape shape-1" style="position: absolute; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%; top: -100px; right: -100px;"></div>
+        <div class="shape shape-2" style="position: absolute; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; bottom: -100px; left: -50px;"></div>
+    </div>
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="display-5 fw-bold text-white mb-3">
+                    Transformons Ensemble Votre Entreprise
+                </h2>
+                <p class="lead text-white mb-4 opacity-90">
+                    Bénéficiez d'une consultation gratuite avec nos experts pour discuter de votre projet de transformation digitale.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="cta-feature d-flex align-items-center gap-2 text-white">
+                        <i class="bi bi-check-circle-fill fs-5"></i>
+                        <span>Diagnostic gratuit</span>
+                    </div>
+                    <div class="cta-feature d-flex align-items-center gap-2 text-white">
+                        <i class="bi bi-check-circle-fill fs-5"></i>
+                        <span>Accompagnement personnalisé</span>
+                    </div>
+                    <div class="cta-feature d-flex align-items-center gap-2 text-white">
+                        <i class="bi bi-check-circle-fill fs-5"></i>
+                        <span>ROI garanti</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                <a href="{{ https_url_for(request,'contact') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold mb-3 d-inline-block">
+                    <i class="bi bi-calendar-check me-2"></i>Prendre Rendez-vous
+                </a>
+                <div class="text-white opacity-90">
+                    <small>
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        +235 63 75 58 58
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-strategy-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,102,204,0.15) !important;
+        border-color: #0066cc !important;
+    }
+
+    .methodology-card:hover {
+        transform: translateY(-10px);
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .hero-shapes .shape {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-shapes .shape-1 {
+        animation-delay: 0s;
+    }
+
+    .hero-shapes .shape-2 {
+        animation-delay: 3s;
+    }
+</style>
+{% endblock %}

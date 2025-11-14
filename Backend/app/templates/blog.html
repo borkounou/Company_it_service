@@ -1,330 +1,580 @@
 {% extends "base.html" %}
 
-{%block carousel%} 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Blog Grid</h1>
-            <a href="" class="h5 text-white">Home</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Blog Grid</a>
-        </div>
-    </div>
-</div>
-{%endblock%}
-   
+{% block head_title %}Blog - Mahrasoft Innovations | Actualités IT et Digital au Tchad{% endblock %}
 
-{%block content%} 
-   <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <!-- Blog list Start -->
-                <div class="col-lg-8">
-                    <div class="row g-5">
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/static/img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
-                            <nav aria-label="Page navigation">
-                              <ul class="pagination pagination-lg m-0">
-                                <li class="page-item disabled">
-                                  <a class="page-link rounded-0" href="#" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="bi bi-arrow-left"></i></span>
-                                  </a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link rounded-0" href="#" aria-label="Next">
-                                    <span aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog list End -->
-    
-                <!-- Sidebar Start -->
-                <div class="col-lg-4">
-                    <!-- Search Form Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Keyword">
-                            <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                    <!-- Search Form End -->
-    
-                    <!-- Category Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Categories</h3>
-                        </div>
-                        <div class="link-animated d-flex flex-column justify-content-start">
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Design</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Keyword Research</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Email Marketing</a>
-                        </div>
-                    </div>
-                    <!-- Category End -->
-    
-                    <!-- Recent Post Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Recent Post</h3>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="/static/img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Recent Post End -->
-    
-                    <!-- Image Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <img src="/static/img/blog-1.jpg" alt="" class="img-fluid rounded">
-                    </div>
-                    <!-- Image End -->
-    
-                    <!-- Tags Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Tag Cloud</h3>
-                        </div>
-                        <div class="d-flex flex-wrap m-n1">
-                            <a href="" class="btn btn-light m-1">Design</a>
-                            <a href="" class="btn btn-light m-1">Development</a>
-                            <a href="" class="btn btn-light m-1">Marketing</a>
-                            <a href="" class="btn btn-light m-1">SEO</a>
-                            <a href="" class="btn btn-light m-1">Writing</a>
-                            <a href="" class="btn btn-light m-1">Consulting</a>
-                            <a href="" class="btn btn-light m-1">Design</a>
-                            <a href="" class="btn btn-light m-1">Development</a>
-                            <a href="" class="btn btn-light m-1">Marketing</a>
-                            <a href="" class="btn btn-light m-1">SEO</a>
-                            <a href="" class="btn btn-light m-1">Writing</a>
-                            <a href="" class="btn btn-light m-1">Consulting</a>
-                        </div>
-                    </div>
-                    <!-- Tags End -->
-    
-                    <!-- Plain Text Start -->
-                    <div class="wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Plain Text</h3>
-                        </div>
-                        <div class="bg-light text-center" style="padding: 30px;">
-                            <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
-                            <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Plain Text End -->
-                </div>
-                <!-- Sidebar End -->
+{% block carousel %}
+<!-- Page Header Modern -->
+<section class="page-header-modern" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); position: relative; overflow: hidden; padding: 120px 0 80px;">
+    <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-down">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb justify-content-center" style="background: transparent;">
+                        <li class="breadcrumb-item"><a href="{{ https_url_for(request,'index') }}" class="text-white opacity-75">Accueil</a></li>
+                        <li class="breadcrumb-item text-white active">Blog</li>
+                    </ol>
+                </nav>
+                <span class="badge bg-white text-primary mb-3 px-4 py-2 rounded-pill">
+                    <i class="bi bi-journal-text me-2"></i>Actualités IT
+                </span>
+                <h1 class="display-3 fw-bold text-white mb-3">Notre Blog</h1>
+                <p class="lead text-white opacity-90">
+                    Découvrez les dernières actualités, conseils et innovations dans le domaine du digital au Tchad
+                </p>
             </div>
         </div>
     </div>
-    <!-- Blog End -->
+</section>
 
+<style>
+    .hero-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 20s infinite;
+    }
 
-    {%endblock%}
+    .shape-1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        left: -50px;
+        animation-delay: 0s;
+    }
+
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        right: -50px;
+        animation-delay: 5s;
+    }
+
+    .shape-3 {
+        width: 150px;
+        height: 150px;
+        bottom: -50px;
+        left: 30%;
+        animation-delay: 10s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-30px) rotate(180deg);
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Blog Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Articles Principaux -->
+            <div class="col-lg-8">
+                <!-- Barre de Recherche -->
+                <div class="blog-search mb-5" data-aos="fade-up">
+                    <div class="input-group input-group-modern">
+                        <input type="text" class="form-control form-control-modern" placeholder="Rechercher un article...">
+                        <button class="btn btn-primary-modern px-4">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grille d'Articles -->
+                <div class="row g-4">
+                    <!-- Article 1 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Transformation digitale au Tchad"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-primary px-3 py-2 rounded-pill">
+                                        Transformation Digitale
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Mahrasoft Team</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>15 Jan, 2024</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">L'avenir de la transformation digitale au Tchad</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Découvrez comment les entreprises tchadiennes adoptent les technologies digitales pour améliorer leur compétitivité et croissance.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 245</span>
+                                        <span><i class="bi bi-chat"></i> 12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/chooseus.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Sécurité des données"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-success px-3 py-2 rounded-pill">
+                                        Cybersécurité
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Nousradine Cherif</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>10 Jan, 2024</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">Guide complet de la sécurité des données pour les PME</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Protégez votre entreprise contre les cybermenaces avec ces bonnes pratiques essentielles de sécurité informatique.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 189</span>
+                                        <span><i class="bi bi-chat"></i> 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/ca4.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Numérisation d'archives"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-info px-3 py-2 rounded-pill">
+                                        Gestion Documentaire
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Mahamat Abdallah</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>5 Jan, 2024</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">Les avantages de la numérisation d'archives pour les institutions</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Comment la digitalisation des documents peut transformer la gestion administrative et améliorer l'efficacité opérationnelle.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 156</span>
+                                        <span><i class="bi bi-chat"></i> 5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Formation IT"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-warning px-3 py-2 rounded-pill">
+                                        Formation
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Mahrasoft Academia</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>2 Jan, 2024</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">Les compétences IT les plus demandées au Tchad en 2024</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Découvrez les métiers du numérique qui recrutent et comment se former pour saisir ces opportunités professionnelles.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 321</span>
+                                        <span><i class="bi bi-chat"></i> 15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/chooseus.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Intelligence Artificielle"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-danger px-3 py-2 rounded-pill">
+                                        IA & Data
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Expert IA</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>28 Déc, 2023</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">L'intelligence artificielle au service des entreprises africaines</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Comment l'IA transforme les business models et crée de nouvelles opportunités pour les entreprises en Afrique.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 278</span>
+                                        <span><i class="bi bi-chat"></i> 22</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Article 6 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <article class="blog-card card-modern h-100">
+                            <div class="blog-image position-relative overflow-hidden rounded-top-4">
+                                <img src="{{ https_url_for(request,'static', path='img/ca4.jpeg') }}" 
+                                     class="img-fluid w-100" 
+                                     alt="Cloud Computing"
+                                     style="height: 250px; object-fit: cover;">
+                                <div class="blog-category position-absolute top-0 start-0 m-4">
+                                    <span class="badge bg-secondary px-3 py-2 rounded-pill">
+                                        Infrastructure IT
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-meta d-flex align-items-center gap-3 mb-3">
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-person"></i>
+                                        <span>Tech Team</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted small">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>20 Déc, 2023</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-title h5 fw-bold mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">Migration vers le cloud : avantages et bonnes pratiques</a>
+                                </h3>
+                                <p class="blog-excerpt text-muted mb-4">
+                                    Tout ce que vous devez savoir pour réussir votre transition vers le cloud computing en toute sécurité.
+                                </p>
+                                <div class="blog-footer d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-modern btn-sm">
+                                        Lire la suite <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    <div class="blog-stats d-flex gap-3 text-muted small">
+                                        <span><i class="bi bi-eye"></i> 194</span>
+                                        <span><i class="bi bi-chat"></i> 7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="blog-pagination mt-5" data-aos="fade-up">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link rounded-pill me-2" href="#" tabindex="-1">
+                                <i class="bi bi-chevron-left"></i> Précédent
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link rounded-circle mx-1" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-circle mx-1" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-circle mx-1" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill ms-2" href="#">
+                                Suivant <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- À propos du blog -->
+                <div class="sidebar-widget card-modern p-4 mb-4" data-aos="fade-left" data-aos-delay="0">
+                    <h4 class="fw-bold mb-3">À propos du blog</h4>
+                    <p class="text-muted mb-0">
+                        Découvrez les dernières tendances technologiques, conseils pratiques et actualités du digital au Tchad. Notre équipe d'experts partage son savoir-faire pour vous accompagner dans votre transformation numérique.
+                    </p>
+                </div>
+
+                <!-- Catégories -->
+                <div class="sidebar-widget card-modern p-4 mb-4" data-aos="fade-left" data-aos-delay="100">
+                    <h4 class="fw-bold mb-3">Catégories</h4>
+                    <div class="category-list">
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 mb-2 text-decoration-none">
+                            <span>Transformation Digitale</span>
+                            <span class="badge bg-primary rounded-pill">12</span>
+                        </a>
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 mb-2 text-decoration-none">
+                            <span>Cybersécurité</span>
+                            <span class="badge bg-success rounded-pill">8</span>
+                        </a>
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 mb-2 text-decoration-none">
+                            <span>Gestion Documentaire</span>
+                            <span class="badge bg-info rounded-pill">6</span>
+                        </a>
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 mb-2 text-decoration-none">
+                            <span>Formation IT</span>
+                            <span class="badge bg-warning rounded-pill">15</span>
+                        </a>
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 mb-2 text-decoration-none">
+                            <span>IA & Data Science</span>
+                            <span class="badge bg-danger rounded-pill">9</span>
+                        </a>
+                        <a href="#" class="category-item d-flex justify-content-between align-items-center p-3 rounded-3 text-decoration-none">
+                            <span>Infrastructure IT</span>
+                            <span class="badge bg-secondary rounded-pill">7</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Articles Récents -->
+                <div class="sidebar-widget card-modern p-4 mb-4" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="fw-bold mb-3">Articles Récents</h4>
+                    <div class="recent-posts">
+                        <div class="recent-post d-flex gap-3 mb-3 pb-3 border-bottom">
+                            <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                                 class="flex-shrink-0 rounded-2" 
+                                 alt="Article récent"
+                                 style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">
+                                    <a href="#" class="text-decoration-none text-dark">L'impact du digital sur l'économie tchadienne</a>
+                                </h6>
+                                <small class="text-muted">12 Jan, 2024</small>
+                            </div>
+                        </div>
+                        <div class="recent-post d-flex gap-3 mb-3 pb-3 border-bottom">
+                            <img src="{{ https_url_for(request,'static', path='img/chooseus.jpeg') }}" 
+                                 class="flex-shrink-0 rounded-2" 
+                                 alt="Article récent"
+                                 style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">
+                                    <a href="#" class="text-decoration-none text-dark">Les meilleures pratiques pour sécuriser vos données</a>
+                                </h6>
+                                <small class="text-muted">8 Jan, 2024</small>
+                            </div>
+                        </div>
+                        <div class="recent-post d-flex gap-3">
+                            <img src="{{ https_url_for(request,'static', path='img/ca4.jpeg') }}" 
+                                 class="flex-shrink-0 rounded-2" 
+                                 alt="Article récent"
+                                 style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">
+                                    <a href="#" class="text-decoration-none text-dark">Comment choisir son hébergeur web au Tchad</a>
+                                </h6>
+                                <small class="text-muted">3 Jan, 2024</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="sidebar-widget card-modern p-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+                    <h4 class="fw-bold mb-3">Tags Populaires</h4>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Digital</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Transformation</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Sécurité</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Cloud</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">IA</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Data</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Formation</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Tchad</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Innovation</a>
+                        <a href="#" class="tag btn btn-outline-modern btn-sm m-1">Technologie</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget card-modern p-4" data-aos="fade-left" data-aos-delay="400" style="background: linear-gradient(135deg, #0066cc, #5ba3e0);">
+                    <div class="text-center text-white">
+                        <i class="bi bi-envelope-check display-4 mb-3"></i>
+                        <h4 class="fw-bold mb-3">Newsletter</h4>
+                        <p class="mb-4 opacity-90">
+                            Recevez nos derniers articles et actualités directement dans votre boîte email.
+                        </p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control rounded-pill" placeholder="Votre email">
+                                <button class="btn btn-light rounded-pill ms-2" type="submit">
+                                    <i class="bi bi-send"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .blog-image {
+        transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-image {
+        transform: scale(1.05);
+    }
+
+    .category-item {
+        transition: all 0.3s ease;
+        background: rgba(0, 102, 204, 0.05);
+        border: 2px solid transparent;
+    }
+
+    .category-item:hover {
+        background: rgba(0, 102, 204, 0.1);
+        border-color: rgba(0, 102, 204, 0.2);
+        transform: translateX(5px);
+    }
+
+    .tag:hover {
+        background: #0066cc !important;
+        color: white !important;
+        transform: translateY(-2px);
+    }
+
+    .recent-post {
+        transition: all 0.3s ease;
+    }
+
+    .recent-post:hover {
+        transform: translateX(5px);
+    }
+
+    .page-link {
+        border: none;
+        margin: 0 2px;
+    }
+
+    .page-link:hover {
+        background: #0066cc;
+        color: white;
+    }
+
+    .input-group-modern {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+</style>
+{% endblock %}

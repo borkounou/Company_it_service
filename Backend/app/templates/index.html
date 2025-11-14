@@ -1,596 +1,853 @@
 {% extends "base.html" %}
 
-{%block carousel%} 
-<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="w-100" src="/static/img/img11.jpg" alt="Image">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Créatif et Innovant</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solutions Rapides, Prix Imbattables</h1>
-                    <!-- <a href="{{https_url_for(request,'quote')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> -->
-                    <a href="{{https_url_for(request,'contact')}}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+{% block head_title %}Mahrasoft Innovations - Leader des Solutions IT au Tchad{% endblock %}
+
+{% block carousel %}
+<!-- Hero Section Modern -->
+<section class="hero-section" style="background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); position: relative; overflow: hidden;">
+    <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container" style="position: relative; z-index: 2; padding: 120px 0;">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="hero-content">
+                    <span class="badge bg-white text-primary mb-3 px-4 py-2 rounded-pill">
+                        <i class="bi bi-stars me-2"></i>Innovation Digitale au Tchad
+                    </span>
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        Transformez Votre Entreprise avec
+                        <span style="color: #87CEEB;">Mahrasoft</span>
+                    </h1>
+                    <p class="lead text-white mb-5">
+                        Leader des services numériques au Tchad, nous offrons des solutions innovantes en numérisation d'archives, développement logiciel, formation professionnelle et transformation digitale.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="{{ https_url_for(request,'contact') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill">
+                            <i class="bi bi-chat-dots-fill me-2"></i>Demander un Devis
+                        </a>
+                        <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
+                            <i class="bi bi-arrow-right-circle me-2"></i>Nos Services
+                        </a>
+                    </div>
+
+                    <!-- Statistiques Hero -->
+                    <div class="hero-stats mt-5">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-auto" data-aos="fade-up" data-aos-delay="100">
+                                <div class="stat-card-modern text-center p-4 position-relative">
+                                    <div class="stat-icon-wrapper mb-3">
+                                        <div class="stat-icon-inner">
+                                            <i class="bi bi-file-earmark-text-fill"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="stat-number fw-bold mb-2" data-count="500000">0+</h3>
+                                    <p class="stat-label mb-0">Dossiers Numérisés</p>
+                                    <div class="stat-glow"></div>
+                                </div>
+                            </div>
+                            <div class="col-auto" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-card-modern text-center p-4 position-relative">
+                                    <div class="stat-icon-wrapper mb-3">
+                                        <div class="stat-icon-inner">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="stat-number fw-bold mb-2" data-count="50">0+</h3>
+                                    <p class="stat-label mb-0">Projets Réalisés</p>
+                                    <div class="stat-glow"></div>
+                                </div>
+                            </div>
+                            <div class="col-auto" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-card-modern text-center p-4 position-relative">
+                                    <div class="stat-icon-wrapper mb-3">
+                                        <div class="stat-icon-inner">
+                                            <i class="bi bi-people-fill"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="stat-number fw-bold mb-2" data-count="30">0+</h3>
+                                    <p class="stat-label mb-0">Clients Satisfaits</p>
+                                    <div class="stat-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img class="w-100" src="/static/img/img10.jpg" alt="Image">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Créatif et Innovant</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solution Numérique Créative et Innovante</h1>
-                    <!-- <a href="{{https_url_for(request,'quote')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> -->
-                    <a href="{{https_url_for(request,'contact')}}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="hero-image position-relative">
+                    <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                         alt="Solutions Mahrasoft" 
+                         class="img-fluid rounded-4 shadow-lg"
+                         style="border: 5px solid rgba(255, 255, 255, 0.2);">
                 </div>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-{%endblock%}
-{%block content%}
+</section>
+{% endblock %}
 
-    <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users text-primary"></i>
+{% block content %}
+<!-- Section Statistiques Unifiée -->
+<section class="py-5" style="background: linear-gradient(135deg, #1a1f35 0%, #2c3e50 100%); margin-top: -50px; position: relative; z-index: 1;">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="stat-card text-center p-4 rounded-4" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="stat-icon mb-3">
+                        <i class="bi bi-award-fill" style="font-size: 3rem; color: #87CEEB;"></i>
+                    </div>
+                    <h2 class="text-white fw-bold mb-2" data-count="3">0+</h2>
+                    <p class="text-white-50 mb-0">Années d'Expérience</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card text-center p-4 rounded-4" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="stat-icon mb-3">
+                        <i class="bi bi-briefcase-fill" style="font-size: 3rem; color: #87CEEB;"></i>
+                    </div>
+                    <h2 class="text-white fw-bold mb-2" data-count="15">0+</h2>
+                    <p class="text-white-50 mb-0">Experts Techniques</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card text-center p-4 rounded-4" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="stat-icon mb-3">
+                        <i class="bi bi-clock-fill" style="font-size: 3rem; color: #87CEEB;"></i>
+                    </div>
+                    <h2 class="text-white fw-bold mb-2" data-count="24">0</h2>
+                    <p class="text-white-50 mb-0">Support Continu</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card text-center p-4 rounded-4" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="stat-icon mb-3">
+                        <i class="bi bi-shield-check" style="font-size: 3rem; color: #87CEEB;"></i>
+                    </div>
+                    <h2 class="text-white fw-bold mb-2" data-count="100">0%</h2>
+                    <p class="text-white-50 mb-0">Satisfaction Client</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="position-relative">
+                    <img src="{{ https_url_for(request,'static', path='img/ca4.jpeg') }}" 
+                         alt="À propos de Mahrasoft" 
+                         class="img-fluid rounded-4 shadow-lg">
+                    <div class="position-absolute bottom-0 start-0 p-4 m-4 bg-primary text-white rounded-4 shadow-lg">
+                        <h3 class="fw-bold mb-0">3+</h3>
+                        <p class="mb-0">Années d'Expérience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="section-title-modern text-start">
+                    <span class="section-subtitle">À PROPOS DE NOUS</span>
+                    <h2 class="section-heading">Excellence en Services Numériques</h2>
+                </div>
+                <p class="mb-4 text-muted">
+                    Mahrasoft Innovations est une entreprise tchadienne fondée par des ingénieurs formés en France et en Inde. Nous sommes le leader des services numériques au Tchad, spécialisés dans la transformation digitale des institutions publiques et privées.
+                </p>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="flex-shrink-0">
+                                <div class="icon-box">
+                                    <i class="bi bi-lightning-charge-fill text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Solutions Rapides</h5>
+                                <p class="text-muted mb-0 small">Délais optimisés pour tous vos projets</p>
+                            </div>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Clients Satisfaits</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">21</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="flex-shrink-0">
+                                <div class="icon-box">
+                                    <i class="bi bi-people-fill text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Experts Qualifiés</h5>
+                                <p class="text-muted mb-0 small">Ingénieurs certifiés et expérimentés</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="flex-shrink-0">
+                                <div class="icon-box">
+                                    <i class="bi bi-headset text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Support 24/7</h5>
+                                <p class="text-muted mb-0 small">Assistance continue disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="flex-shrink-0">
+                                <div class="icon-box">
+                                    <i class="bi bi-shield-check text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Sécurité Garantie</h5>
+                                <p class="text-muted mb-0 small">Protection maximale des données</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check text-white"></i>
+                <a href="{{ https_url_for(request,'about') }}" class="btn btn-primary-modern">
+                    <i class="bi bi-info-circle-fill me-2"></i>En Savoir Plus
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section-modern" style="background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="section-title-modern" data-aos="fade-up">
+            <span class="section-subtitle">NOS EXPERTISES</span>
+            <h2 class="section-heading">Solutions Digitales Innovantes</h2>
+            <p class="section-description">
+                Découvrez notre gamme complète de services conçus pour propulser votre transformation numérique
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Services cards restent identiques -->
+            <!-- Numérisation d'Archives -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Numérisation d'Archives</h4>
+                    <p class="text-muted mb-4">
+                        Solutions complètes de digitalisation documentaire avec numérisation haute résolution, OCR et gestion électronique d'archives (GEA).
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">Haute Résolution</span>
+                        <span class="badge bg-light text-primary px-3 py-2">OCR</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Indexation</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Développement Logiciel -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Développement Logiciel</h4>
+                    <p class="text-muted mb-4">
+                        Création d'applications web, mobile et desktop sur mesure adaptées à vos processus métiers spécifiques.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">Web Apps</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Mobile</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Desktop</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gestion Documentaire -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-folder2-open"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Gestion Documentaire</h4>
+                    <p class="text-muted mb-4">
+                        Systèmes d'archivage électronique (SAE) pour organiser, stocker et gérer vos documents numériques de manière sécurisée.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">SAE</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Sécurisé</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Traçable</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formation Professionnelle -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Formation Professionnelle</h4>
+                    <p class="text-muted mb-4">
+                        Programmes de formation pratiques en développement web, cybersécurité, IA et technologies modernes.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">Certifiant</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Pratique</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Expert</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Analyse de Données & IA -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Analyse de Données & IA</h4>
+                    <p class="text-muted mb-4">
+                        Exploitez les analyses avancées et algorithmes d'IA pour stimuler l'innovation et la prise de décisions stratégiques.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">Big Data</span>
+                        <span class="badge bg-light text-primary px-3 py-2">ML</span>
+                        <span class="badge bg-light text-primary px-3 py-2">BI</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services IT -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-modern text-center">
+                    <div class="card-icon mx-auto">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Services Informatiques</h4>
+                    <p class="text-muted mb-4">
+                        Support technique, maintenance et optimisation de votre infrastructure IT pour améliorer efficacité et fiabilité.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="badge bg-light text-primary px-3 py-2">Support</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Cloud</span>
+                        <span class="badge bg-light text-primary px-3 py-2">Maintenance</span>
+                    </div>
+                    <a href="{{ https_url_for(request,'service') }}" class="btn btn-outline-modern">
+                        <i class="bi bi-arrow-right me-2"></i>En Savoir Plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Le reste du contenu reste identique -->
+<!-- Projets Réalisés Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="section-title-modern" data-aos="fade-up">
+            <span class="section-subtitle">NOS RÉALISATIONS</span>
+            <h2 class="section-heading">Projets d'Excellence</h2>
+            <p class="section-description">
+                Découvrez nos projets phares qui transforment le paysage numérique au Tchad
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Projet CARMI -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="project-card card-modern">
+                    <div class="project-image mb-4">
+                        <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                             alt="Projet CARMI" 
+                             class="img-fluid rounded-3">
+                    </div>
+                    <h4 class="fw-bold mb-3">Numérisation Archives CARMI</h4>
+                    <p class="text-muted mb-3">
+                        Digitalisation de plus de 500,000 pages d'archives militaires avec système de gestion électronique complet.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="badge bg-primary px-3 py-2">
+                            <i class="bi bi-check-circle me-1"></i>Terminé
+                        </span>
+                        <span class="text-muted small">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mahrasoft Academia -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card card-modern">
+                    <div class="project-image mb-4">
+                        <img src="{{ https_url_for(request,'static', path='img/chooseus.jpeg') }}" 
+                             alt="Mahrasoft Academia" 
+                             class="img-fluid rounded-3">
+                    </div>
+                    <h4 class="fw-bold mb-3">Mahrasoft Academia</h4>
+                    <p class="text-muted mb-3">
+                        Plateforme e-learning complète avec LMS avancé, classes virtuelles et suivi personnalisé des apprenants.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="badge bg-success px-3 py-2">
+                            <i class="bi bi-play-circle me-1"></i>En Ligne
+                        </span>
+                        <a href="https://mahrasoftacademia.com" target="_blank" class="text-primary fw-bold">
+                            Visiter <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mahrasouk -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card card-modern">
+                    <div class="project-image mb-4">
+                        <img src="{{ https_url_for(request,'static', path='img/application.jpeg') }}" 
+                             alt="Mahrasouk" 
+                             class="img-fluid rounded-3">
+                    </div>
+                    <h4 class="fw-bold mb-3">Mahrasouk E-Commerce</h4>
+                    <p class="text-muted mb-3">
+                        Marketplace innovante connectant les commerçants tchadiens aux consommateurs avec paiement sécurisé.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="badge bg-success px-3 py-2">
+                            <i class="bi bi-cart me-1"></i>Actif
+                        </span>
+                        <a href="https://mahrasouk.com" target="_blank" class="text-primary fw-bold">
+                            Visiter <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-shapes">
+        <div class="cta-shape cta-shape-1"></div>
+        <div class="cta-shape cta-shape-2"></div>
+    </div>
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="display-5 fw-bold text-white mb-3">
+                    Prêt à Transformer Votre Entreprise ?
+                </h2>
+                <p class="lead text-white mb-0 opacity-90">
+                    Contactez-nous dès aujourd'hui pour discuter de vos besoins en solutions digitales et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                <a href="{{ https_url_for(request,'contact') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold">
+                    <i class="bi bi-chat-dots-fill me-2"></i>Demander un Devis
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-modern" style="background: #f9fafb;">
+    <div class="container">
+        <div class="section-title-modern" data-aos="fade-up">
+            <span class="section-subtitle">TÉMOIGNAGES</span>
+            <h2 class="section-heading">Ce Que Disent Nos Clients</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Témoignages restent identiques -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card card-modern">
+                    <div class="quote-icon mb-3">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="mb-4 text-muted">
+                        "La collaboration avec Mahrasoft Innovations a transformé notre gestion documentaire. Le système mis en place nous a permis de réduire de 80% le temps de recherche des dossiers."
+                    </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold mb-1">Directeur des Archives</h6>
+                            <p class="text-muted small mb-0">CARMI - Caisse de Retraite Militaire</p>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-primary mb-0">Projets Réalisés</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">23</h1>
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-award text-primary"></i>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card card-modern">
+                    <div class="quote-icon mb-3">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="mb-4 text-muted">
+                        "Grâce à Mahrasoft Academia, j'ai pu me former en développement web tout en continuant mon travail. La plateforme est intuitive et les formateurs très disponibles."
+                    </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold mb-1">Ahmed, 28 ans</h6>
+                            <p class="text-muted small mb-0">Développeur Web</p>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Récompenses Gagnées</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">8</h1>
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card card-modern">
+                    <div class="quote-icon mb-3">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="mb-4 text-muted">
+                        "Mahrasouk a transformé mon commerce traditionnel. Mes ventes ont augmenté de 300% depuis que j'ai rejoint la plateforme. Un excellent partenaire pour digitaliser son business."
+                    </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold mb-1">Hassan, 45 ans</h6>
+                            <p class="text-muted small mb-0">Commerçant en Artisanat</p>
+                        </div>
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Facts Start -->
+</section>
+{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Styles unifiés pour les statistiques */
+    .hero-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-    <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">À PROPOS DE NOUS</h5>
-                        <h1 class="mb-0">Solutions Informatiques Fiables, Accélérées vers la Perfection</h1>
-                    </div>
-                    <!-- <p class="mb-4">we offer a comprehensive suite of digital solutions to empower your business in the modern era. From dynamic web development and innovative application creation to cutting-edge AI model training and robust IT services, we tailor our offerings to meet your specific needs. Our team of skilled professionals excels in delivering high-quality results, ensuring that your online presence is engaging, efficient, and secure. With a commitment to excellence and a passion for innovation, we provide expert consultation and support every step of the way, helping you navigate the complexities of the digital landscape with confidence and ease.</p> -->
-                     <p class="mb-4">Nous offrons une gamme complète de solutions numériques pour dynamiser votre entreprise à l'ère moderne. De la création de sites web dynamiques et d'applications innovantes à la formation de modèles d'IA de pointe et aux services informatiques robustes, nous adaptons nos offres à vos besoins spécifiques. Notre équipe de professionnels qualifiés excelle dans la livraison de résultats de haute qualité, garantissant que votre présence en ligne est engageante, efficace et sécurisée. Avec un engagement envers l'excellence et une passion pour l'innovation, nous fournissons des consultations et un soutien experts à chaque étape, vous aidant à naviguer dans les complexités du paysage numérique avec confiance et aisance.</p>
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Solutions Rapides</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Personnel Professionnel</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Support 24/7</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Prix abordable</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Contactez-nous</h5>
-                            <h4 class="text-primary mb-0">+235 66 38 38 56</h4>
-                        </div>
-                    </div>
-                    <!-- <a href="{{https_url_for(request,'quote')}}" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a> -->
-                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="/static/img/application.jpeg" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 20s infinite;
+    }
 
+    .shape-1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        left: -50px;
+        animation-delay: 0s;
+    }
 
-    <!-- Features Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">POURQUOI NOUS CHOISIR</h5>
-                <h1 class="mb-0">Nous Sommes Ici pour Faire Croître Votre Projet de Manière Exponentielle</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
-                            </div>
-                            <h4>Solutions Abordables et Rapides </h4>
-                            <p class="mb-0">Nous comprenons l'importance de l'efficacité des coûts et de la rapidité dans le monde numérique. Nos solutions sont conçues pour être économiques sans compromettre la qualité, vous garantissant le meilleur rapport qualité-prix dans des délais record.</p>
-                            <!-- <p class="mb-0">We understand the importance of both cost-efficiency and speed in the digital world. Our solutions are designed to be budget-friendly without compromising on quality, ensuring you get the best value for your investment in record time.</p> -->
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
-                            </div>
-                            <h4>Technologie Moderne et Approche Orientée Industrie</h4>
-                            <p class="mb-0">Nous utilisons les dernières technologies et les meilleures pratiques de l'industrie pour vous fournir des solutions à la pointe. Notre approche est toujours tournée vers l'avenir, vous assurant de rester en tête de la concurrence et d'être bien préparé pour les évolutions futures.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="/static/img/chooseus.jpeg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-users-cog text-white"></i>
-                            </div>
-                            <h4>Personnel Professionnel</h4>
-                            <p class="mb-0">Notre équipe est composée de professionnels hautement qualifiés, avec une vaste expérience en développement web, création d'applications, formation de modèles d'IA et services informatiques. Nous sommes fiers de notre capacité à fournir des solutions expertes adaptées à vos besoins spécifiques.</p>
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-phone-alt text-white"></i>
-                            </div>
-                            <h4>Support 24/7</h4>
-                            <p class="mb-0">Notre équipe de support dédiée est disponible en permanence, y compris pendant les week-ends. Avec un support 24/7, vous pouvez être sûr que l'aide est toujours à un appel ou un message près, garantissant que vos opérations se déroulent sans interruptions.</p>
-                            <!-- <p class="mb-0">Our dedicated support team is available around the clock, even extending our availability to cover weekends. With 24/7 support, you can be confident that help is always just a call or message away, ensuring your operations run smoothly without interruptions.</p> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features Start -->
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        right: -50px;
+        animation-delay: 5s;
+    }
 
+    .shape-3 {
+        width: 150px;
+        height: 150px;
+        bottom: -50px;
+        left: 30%;
+        animation-delay: 10s;
+    }
 
-    <!-- Service Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">NOS SERVICES</h5>
-                <h1 class="mb-0">Solutions Informatiques Personnalisées pour le Succès de Votre Business/Entreprise</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-shield-alt text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Sécurité Informatique</h4>
-                        <p class="m-0">Protégez vos actifs numériques avec nos services de sécurité informatique, qui offrent des solutions avancées de détection, de prévention et de réponse aux menaces pour garantir que votre entreprise reste sécurisée et conforme.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-chart-pie text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Analyse des Données et Intelligence Artificielle</h4>
-                        <p class="m-0">Exploitez les analyses avancées et les algorithmes d'IA pour stimuler l'innovation, l'efficacité et la prise de décisions stratégiques au sein de votre organisation.</p>
-                        <!-- <p class="m-0">Leveraging advanced analytics and AI algorithms to drive innovation, efficiency, and strategic decision-making in your organization.</p> -->
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-code text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Développement Logiciel/Web</h4>
-                        <p class="m-0">Valorisez votre présence en ligne grâce à nos services de développement logiciel ou web sur mesure, créant des sites captivants, réactifs et conviviaux, adaptés à vos besoins commerciaux uniques.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fab fa-android text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Développement d'Applications</h4>
-                        <p class="m-0">Transformez vos idées en applications mobiles et web centrées sur l'utilisateur avec nos services de développement d'applications, garantissant une fonctionnalité fluide et une expérience utilisateur exceptionnelle.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Services Informatiques</h4>
-                        <p class="m-0">Améliorez l'efficacité et la fiabilité de votre infrastructure informatique grâce à notre gamme complète de services informatiques.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h3 class="text-white mb-3">Contactez-nous </h3>
-                        <p class="text-white mb-3">Notre équipe se tient prête à répondre à toutes vos demandes et à vous fournir le support nécessaire. Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons collaborer ensemble.</p>
-                        <h2 class="text-white mb-0">+235 66 38 38 56</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
+    .cta-section {
+        background: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%); 
+        padding: 80px 0; 
+        position: relative; 
+        overflow: hidden;
+    }
 
+    .cta-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-    <!-- Pricing Plan Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
-                <h1 class="mb-0">We are Offering Competitive Prices for Our Clients</h1>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="bg-light rounded">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Plan de Base</h4>
-                            <small class="text-uppercase">POUR PETITES ENTREPRISES</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;"></small>50000 FCFA
-  
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>Site web static</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>configuration et hebergement</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Support Multi-navigateurs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Dynamique</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Maintenance</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Commandez maintenant</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Standard Plan</h4>
-                            <small class="text-uppercase">For Medium Size Business</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="bg-light rounded">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Advanced Plan</h4>
-                            <small class="text-uppercase">For Large Size Business</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Pricing Plan End -->
+    .cta-shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+    }
 
+    .cta-shape-1 {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        right: -100px;
+    }
 
-    <!-- Quote Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Request A Quote</h5>
-                        <h1 class="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
-                    </div>
-                    <div class="row gx-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Reply within 24 hours</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs telephone support</h5>
-                        </div>
-                    </div>
-                    <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+235 66 38 38 56</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Quote End -->
+    .cta-shape-2 {
+        width: 300px;
+        height: 300px;
+        bottom: -150px;
+        left: -50px;
+    }
 
+    /* Styles pour les statistiques hero */
+    .hero-stats {
+        position: relative;
+        z-index: 3;
+    }
 
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-                <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="/static/img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="/static/img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="/static/img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="/static/img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
+    .stat-card-modern {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        min-width: 200px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        overflow: hidden;
+    }
 
+    .stat-card-modern::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    }
 
-    <!-- Team Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
-                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="/static/img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="/static/img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="/static/img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
+    .stat-card-modern:hover {
+        transform: translateY(-10px) scale(1.05);
+        background: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 20px 40px rgba(0, 102, 204, 0.3);
+    }
 
+    .stat-icon-wrapper {
+        position: relative;
+        display: inline-block;
+    }
 
-    <!-- Blog Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Latest Blog</h5>
-                <h1 class="mb-0">Read The Latest Articles from Our Blog Post</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="/static/img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="/static/img/blog-2.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="/static/img/blog-3.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    .stat-icon-inner {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.4s ease;
+    }
 
+    .stat-card-modern:hover .stat-icon-inner {
+        transform: scale(1.1) rotate(5deg);
+        background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2));
+        border-color: rgba(255, 255, 255, 0.6);
+    }
 
+    .stat-icon-inner i {
+        font-size: 1.8rem;
+        color: white;
+        text-shadow: 0 2px 10px rgba(0, 102, 204, 0.5);
+    }
 
+    .stat-number {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #ffffff, #e6f2ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        letter-spacing: -0.5px;
+    }
 
-   
-{%endblock%}
+    .stat-label {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1rem;
+        font-weight: 500;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        border-radius: 20px;
+    }
+
+    .stat-card-modern:hover .stat-glow {
+        opacity: 1;
+    }
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #0066cc, #5ba3e0);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quote-icon i {
+        font-size: 3rem;
+        color: #0066cc;
+        opacity: 0.2;
+    }
+
+    /* Animations */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-30px) rotate(180deg);
+        }
+    }
+
+    @keyframes countUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .stat-number {
+        animation: countUp 0.8s ease-out;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .stat-card-modern {
+            min-width: 160px;
+            padding: 1.5rem 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+        }
+        
+        .stat-icon-inner {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .stat-icon-inner i {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero-stats .row {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-card-modern {
+            min-width: 200px;
+            margin-bottom: 1rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Animation unifiée pour tous les compteurs
+    function animateCounter(element) {
+        const target = element.getAttribute('data-count').includes('%') 
+            ? parseInt(element.getAttribute('data-count'))
+            : parseInt(element.getAttribute('data-count'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                if (element.getAttribute('data-count').includes('%')) {
+                    element.textContent = target + '%';
+                } else {
+                    element.textContent = target.toLocaleString() + '+';
+                }
+                clearInterval(timer);
+            } else {
+                if (element.getAttribute('data-count').includes('%')) {
+                    element.textContent = Math.floor(current) + '%';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString() + '+';
+                }
+            }
+        }, 16);
+    }
+
+    // Observer pour détecter quand les éléments sont visibles
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                setTimeout(() => {
+                    animateCounter(counter);
+                }, entry.target.closest('.hero-stats') ? 300 : 0);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    // Observer tous les compteurs
+    document.querySelectorAll('[data-count]').forEach(counter => {
+        observer.observe(counter);
+    });
+</script>
+{% endblock %}

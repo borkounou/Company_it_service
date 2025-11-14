@@ -1,160 +1,858 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>Mahrasoft Innovations</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Mahrasoft Innovations, IT Solutions, Cybersecurity, Software Development, Data Analysis, IT Consulting, Chad IT Services, Digital Transformation, Mobile App Development, Chad Technology Company" name="keywords">
-    <meta content="Mahrasoft Innovations is a leading IT company in Chad, offering customized IT solutions, cybersecurity services, software development, data analysis, and digital transformation consulting to help businesses thrive." name="description">
-    
+    <title>{% block head_title %}Mahrasoft Innovations - Solutions IT au Tchad{% endblock %}</title>
+    <meta name="description" content="Mahrasoft Innovations - Leader des Services Numériques au Tchad. Numérisation d'archives, développement logiciel, analyse de données, formations professionnelles et transformation digitale.">
+    <meta name="keywords" content="Mahrasoft Innovations, solutions IT Tchad, numérisation archives, développement logiciel, e-learning Tchad, formation professionnelle, transformation digitale Afrique, Mahrasouk, Mahrasoft Academia">
 
     <!-- Favicon -->
-    <!-- <link href="img/favicon.ico" rel="icon"> -->
-    <link rel="shortcut icon" href="../static//img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ https_url_for(request,'static', path='img/favicon.ico') }}" type="image/x-icon" />
 
-    <!-- Google Web Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <!-- <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{{ https_url_for(request,'static',path='lib/owlcarousel/assets/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ https_url_for(request,'static',path='lib/animate/animate.min.css')}}">
-    <!-- <link href="../static/lib/animate/animate.min.css" rel="stylesheet"> -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{{ https_url_for(request,'static',path='css/bootstrap.min.css')}}">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <!-- <link href="../static/css/style.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{{ https_url_for(request,'static',path='css/style.css')}}">
+    <!-- Custom CSS -->
+    <style>
+        /* ============================================================================
+           VARIABLES CSS MODERNES MAHRASOFT
+           ============================================================================ */
+        :root {
+            /* Couleurs Mahrasoft */
+            --primary-blue: #0066cc;
+            --primary-light: #5ba3e0;
+            --primary-dark: #004a99;
+            --sky-blue: #87CEEB;
+            --gradient-primary: linear-gradient(135deg, #0066cc 0%, #5ba3e0 100%);
+            --gradient-reverse: linear-gradient(135deg, #5ba3e0 0%, #0066cc 100%);
+            
+            /* Couleurs neutres */
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Typographie */
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+            
+            /* Espacements */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            
+            /* Bordures */
+            --radius-sm: 0.5rem;
+            --radius-md: 1rem;
+            --radius-lg: 1.5rem;
+            --radius-xl: 2rem;
+            --radius-full: 9999px;
+            
+            /* Ombres */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================================================
+           STYLES GLOBAUX
+           ============================================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--gray-900);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all var(--transition-base);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary-light);
+            color: var(--white);
+        }
+
+        /* ============================================================================
+           SPINNER DE CHARGEMENT
+           ============================================================================ */
+        #spinner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        #spinner.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            border-width: 0.25rem;
+            border-color: var(--primary-blue);
+            border-right-color: transparent;
+        }
+
+        /* ============================================================================
+           TOPBAR MODERNE
+           ============================================================================ */
+        .topbar {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+            color: var(--white);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .topbar-contact {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .topbar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all var(--transition-base);
+        }
+
+        .topbar-item:hover {
+            color: var(--sky-blue);
+            transform: translateY(-1px);
+        }
+
+        .topbar-item i {
+            font-size: 1rem;
+        }
+
+        .topbar-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            color: var(--white);
+            transition: all var(--transition-base);
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================================================
+           NAVBAR MODERNE ET ÉLÉGANTE
+           ============================================================================ */
+        .navbar-modern {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            transition: all var(--transition-base);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-modern.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.98) !important;
+        }
+
+        .navbar-brand-modern {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-heading);
+        }
+
+        .navbar-brand-modern img {
+            height: 50px;
+            width: auto;
+            transition: all var(--transition-base);
+        }
+
+        .navbar-modern.scrolled .navbar-brand-modern img {
+            height: 40px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-tagline {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .nav-link-modern {
+            position: relative;
+            padding: 0.5rem 1rem !important;
+            font-weight: 600;
+            color: var(--gray-700) !important;
+            transition: all var(--transition-base);
+            border-radius: var(--radius-sm);
+        }
+
+        .nav-link-modern::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: translateX(-50%);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link-modern:hover,
+        .nav-link-modern.active {
+            color: var(--primary-blue) !important;
+        }
+
+        .nav-link-modern:hover::before,
+        .nav-link-modern.active::before {
+            width: 80%;
+        }
+
+        .btn-primary-gradient {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+            background: var(--gradient-reverse);
+        }
+
+        /* ============================================================================
+           DROPDOWN MODERNE
+           ============================================================================ */
+        .dropdown-menu-modern {
+            border: none;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            animation: dropdownFade 0.3s ease;
+        }
+
+        @keyframes dropdownFade {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item-modern {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+        }
+
+        .dropdown-item-modern:hover {
+            background: var(--gray-100);
+            color: var(--primary-blue);
+            transform: translateX(5px);
+        }
+
+        .dropdown-item-modern i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* ============================================================================
+           SECTIONS ET CONTENEURS
+           ============================================================================ */
+        .section-modern {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .section-title-modern {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ============================================================================
+           CARDS MODERNES
+           ============================================================================ */
+        .card-modern {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-base);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-base);
+        }
+
+        .card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card-modern:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            transition: all var(--transition-base);
+        }
+
+        .card-modern:hover .card-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        /* ============================================================================
+           BUTTONS MODERNES
+           ============================================================================ */
+        .btn-modern {
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-modern {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-outline-modern {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-outline-modern:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ============================================================================
+           FOOTER MODERNE
+           ============================================================================ */
+        .footer-modern {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            color: var(--gray-300);
+            padding: var(--spacing-2xl) 0 var(--spacing-md);
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-link {
+            display: block;
+            color: var(--gray-400);
+            padding: 0.5rem 0;
+            transition: all var(--transition-base);
+        }
+
+        .footer-link:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        /* ============================================================================
+           RESPONSIVE
+           ============================================================================ */
+        @media (max-width: 991px) {
+            .topbar {
+                display: none;
+            }
+
+            .section-heading {
+                font-size: 2rem;
+            }
+
+            .navbar-brand-modern img {
+                height: 40px;
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-heading {
+                font-size: 1.75rem;
+            }
+
+            .section-modern {
+                padding: var(--spacing-xl) 0;
+            }
+        }
+
+        /* ============================================================================
+           ANIMATIONS
+           ============================================================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease;
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner"></div>
+    <!-- Spinner Start -->
+    <div id="spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
         </div>
-        <!-- Spinner End -->
-          
-          <!-- Topbar Start -->
-          <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-            <div class="row gx-0">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rue de 40, NDjemana, Tchad</small>
-                        <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+235 66 38 38 56</small>
-                        <small class="text-light"><i class="fa fa-envelope-open me-2"></i>mahrasoft.contact@gmail.com</small>
-                    </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-container">
+                <div class="topbar-contact">
+                    <a href="https://maps.google.com/?q=Rue+de+40,+NDjamena,+Tchad" target="_blank" class="topbar-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>N'Djaména, Tchad</span>
+                    </a>
+                    <a href="tel:+23563755858" class="topbar-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>+235 63 75 58 58</span>
+                    </a>
+                    <a href="mailto:mahrasoft.contact@gmail.com" class="topbar-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>mahrasoft.contact@gmail.com</span>
+                    </a>
                 </div>
-
-            </div>
-        </div>
-        <!-- Topbar End -->    
-          
-          
-          <!-- Navbar & Carousel Start -->
-          <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-                <a href="{{https_url_for(request,'index')}}" class="navbar-brand p-0">
-                    <img src="/static/img/Logo-mahrasoft.jpg" alt="Logo" style="width:80px ;height: 40px;">
-                    
-                    <!-- <h1 class="m-0">Mahrasoft</h1> -->
-                    <!-- <i class="fa fa-user-tie me-2"></i> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="{{https_url_for(request,'index')}}" {% if current == "index" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}  >Accueil</a>
-                        <a href="{{https_url_for(request,'about')}}" {% if current == "about" %}  class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>À Propos</a>
-                        <a href="{{https_url_for(request,'service')}}"{% if current == "service" %} class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>Services</a>
-                        <div class="nav-item dropdown">
-                            <a href="#"{% if current == "valeurs" or current == "clients" or current == "strategie"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %}  data-bs-toggle="dropdown">Decouvrez Mahrasoft</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="/decouvrez/valeurs" class="dropdown-item">Nos valeurs</a>
-                                <a href="/decouvrez/clients" class="dropdown-item">Comment nous aidons nos clients</a>
-                                <a href="/decouvrez/strategie" class="dropdown-item">Stratégie & Conseil</a>
-                            </div>
-                        </div>
-
-
-                        <div class="nav-item dropdown">
-                            <a href="#"{% if current == "rechercherpostuler" or current == "jeunediplomes" or current == "etudiants" or current == "formation" or current == "environnementdetravail"  %} class="nav-link dropdown-toggle active" {% else %} class="nav-link dropdown-toggle" {% endif %}  data-bs-toggle="dropdown">Carrières</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="/carrieres/rechercherpostuler" class="dropdown-item">Rechercher et postuler</a>
-                                <!-- <a href="/carrieres/jeunediplomes" class="dropdown-item">Jeunes diplômés</a>
-                                <a href="/carrieres/etudiants" class="dropdown-item">Etudiants</a>
-                                <a href="/carrieres/formation" class="dropdown-item">Formation et développement de carrière</a>
-                                <a href="/carrieres/environnementdetravail" class="dropdown-item">Environnement de travail</a> -->
-                            </div>
-                        </div>
-          
-                        <a href="{{https_url_for(request,'contact')}}" {% if current == "contact" %} class="nav-item nav-link active" {% else %} class="nav-item nav-link" {% endif %}>Contact</a>
-                    </div>
-                    <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
-                    <!-- <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> -->
-                </div>
-            </nav>
-            
-            {%block carousel%} {%endblock%}
-   
-        </div>
-        <!-- Navbar & Carousel End -->
-
-
-            <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
+                <div class="topbar-social">
+                    <a href="https://www.youtube.com/@mahrasoftinnovations" target="_blank" class="social-link" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/mahrasoft" target="_blank" class="social-link" title="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Mahrasoft-Innovations/61564920615100/" target="_blank" class="social-link" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/mahrasoft" target="_blank" class="social-link" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/mahrasoft" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-      
-      
-    
-    {%block content%}
+    <!-- Topbar End -->
 
-    {%endblock%}
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-modern">
+        <div class="container">
+            <a href="{{ https_url_for(request,'index') }}" class="navbar-brand-modern">
+                <img src="{{ https_url_for(request,'static', path='img/Logo-mahrasoft.jpg') }}" alt="Mahrasoft Innovations Logo">
+                <div class="brand-text">
+                    <div class="brand-name">Mahrasoft</div>
+                    <div class="brand-tagline">Innovations pour l'Afrique</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="{{ https_url_for(request,'index') }}" class="nav-link-modern {% if current == 'index' %}active{% endif %}">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ https_url_for(request,'about') }}" class="nav-link-modern {% if current == 'about' %}active{% endif %}">
+                            À Propos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ https_url_for(request,'service') }}" class="nav-link-modern {% if current == 'service' %}active{% endif %}">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['valeurs', 'clients', 'strategie'] %}active{% endif %}" data-bs-toggle="dropdown">
+                            Découvrir
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-modern">
+                            <li><a href="/decouvrez/valeurs" class="dropdown-item-modern">
+                                <i class="bi bi-heart-fill"></i>Nos Valeurs
+                            </a></li>
+                            <li><a href="/decouvrez/clients" class="dropdown-item-modern">
+                                <i class="bi bi-people-fill"></i>Nos Clients
+                            </a></li>
+                            <li><a href="/decouvrez/strategie" class="dropdown-item-modern">
+                                <i class="bi bi-graph-up-arrow"></i>Notre Vision
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['rechercherpostuler'] %}active{% endif %}" data-bs-toggle="dropdown">
+                            Carrières
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-modern">
+                            <li><a href="/carrieres/rechercherpostuler" class="dropdown-item-modern">
+                                <i class="bi bi-search"></i>Rechercher et Postuler
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ https_url_for(request,'contact') }}" class="nav-link-modern {% if current == 'contact' %}active{% endif %}">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="{{ https_url_for(request,'contact') }}" class="btn btn-primary-gradient">
+                            <i class="bi bi-chat-dots-fill me-2"></i>Demander un Devis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
+    {% block carousel %}{% endblock %}
 
-
+    {% block content %}{% endblock %}
 
     {% block footer %}
-    {% include "footer.html" %}
-    {%endblock%}
+    <!-- Footer Start -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <h3 class="footer-title">
+                            <i class="bi bi-code-slash me-2" style="color: var(--sky-blue);"></i>
+                            Mahrasoft Innovations
+                        </h3>
+                        <p class="mb-4">
+                            Leader des services numériques au Tchad. Nous transformons les entreprises et institutions grâce à des solutions digitales innovantes et performantes.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.facebook.com/people/Mahrasoft-Innovations/61564920615100/" target="_blank" class="social-link">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/mahrasoft" target="_blank" class="social-link">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mahrasoft" target="_blank" class="social-link">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com/mahrasoft" target="_blank" class="social-link">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@mahrasoftinnovations" target="_blank" class="social-link">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Liens Rapides</h5>
+                    <a href="{{ https_url_for(request,'index') }}" class="footer-link">Accueil</a>
+                    <a href="{{ https_url_for(request,'about') }}" class="footer-link">À Propos</a>
+                    <a href="{{ https_url_for(request,'service') }}" class="footer-link">Services</a>
+                    <a href="{{ https_url_for(request,'contact') }}" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Nos Services</h5>
+                    <a href="{{ https_url_for(request,'service') }}" class="footer-link">Numérisation d'Archives</a>
+                    <a href="{{ https_url_for(request,'service') }}" class="footer-link">Développement Logiciel</a>
+                    <a href="{{ https_url_for(request,'service') }}" class="footer-link">Formation Professionnelle</a>
+                    <a href="{{ https_url_for(request,'service') }}" class="footer-link">Gestion Documentaire</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Nous Contacter</h5>
+                    <div class="footer-link">
+                        <i class="bi bi-geo-alt-fill me-2" style="color: var(--sky-blue);"></i>
+                        N'Djaména, Tchad
+                    </div>
+                    <div class="footer-link">
+                        <i class="bi bi-telephone-fill me-2" style="color: var(--sky-blue);"></i>
+                        +235 63 75 58 58
+                    </div>
+                    <div class="footer-link">
+                        <i class="bi bi-telephone-fill me-2" style="color: var(--sky-blue);"></i>
+                        +235 64 64 35 00
+                    </div>
+                    <div class="footer-link">
+                        <i class="bi bi-envelope-fill me-2" style="color: var(--sky-blue);"></i>
+                        mahrasoft.contact@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">
+                    &copy; 2025 <strong>Mahrasoft Innovations</strong>. Tous droits réservés. 
+                    <span class="mx-2">|</span>
+                    Conçu avec <i class="bi bi-heart-fill" style="color: #e74c3c;"></i> au Tchad
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    {% endblock %}
 
-    
-    
-
-    <!-- <script src="../static/js/email.js"></script>  -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary-gradient position-fixed bottom-0 end-0 m-4 rounded-circle d-none" id="backToTop" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{https_url_for(request,'static', path='lib/wow/wow.min.js')}}"></script>
-    <script src="{{https_url_for(request,'static', path='lib/easing/easing.min.js')}}"></script>
-    <script src="{{https_url_for(request,'static', path='lib/waypoints/waypoints.min.js')}}"></script>
-    <script src="{{https_url_for(request,'static', path='lib/counterup/counterup.min.js')}}"></script>
-    <script src="{{https_url_for(request,'static', path='lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{https_url_for(request,'static', path='js/main.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialisation AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Cacher le spinner après le chargement
+        window.addEventListener('load', function() {
+            document.getElementById('spinner').classList.add('hide');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-modern');
+            const backToTop = document.getElementById('backToTop');
+            
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.remove('d-none');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.add('d-none');
+            }
+        });
+
+        // Back to top smooth scroll
+        document.getElementById('backToTop').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Active link highlighting
+        const currentLocation = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link-modern');
+        navLinks.forEach(link => {
+            if(link.getAttribute('href') === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+    {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -4,8 +4,6 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse 
 import json
 
-
-
 # def https_url_for(request:Request, name:str, **path_params:any)->str:
 #     http_url = request.url_for(name, **path_params)
 #     https_url =str(http_url).replace("http", "https", 1)
@@ -15,7 +13,6 @@ import json
 
 with open("db.json") as file:
     posts = json.load(file)
-
 posts = posts["posts"]
 
 
