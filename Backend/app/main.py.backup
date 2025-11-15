@@ -137,27 +137,3 @@ async def quote(request: Request):
 @app.get("/carrieres/environnementdetravail", response_class=HTMLResponse)
 async def quote(request: Request):
     return templates.TemplateResponse("environnementdetravail.html", {"request":request, "current":"environnementdetravail"})
-
-# ================================
-# Health Check Endpoints
-# ================================
-from datetime import datetime
-
-@app.get("/health")
-async def health_check():
-    """Endpoint de santé pour Docker health check et monitoring"""
-    return {
-        "status": "healthy",
-        "service": "Mahrasoft.com",
-        "timestamp": datetime.now().isoformat(),
-        "version": "1.0.0"
-    }
-
-@app.get("/ping")
-async def ping():
-    """Simple ping endpoint pour vérifier que le service répond"""
-    return {
-        "status": "ok",
-        "message": "pong",
-        "timestamp": datetime.now().isoformat()
-    }
