@@ -183,8 +183,26 @@ else
     fi
 fi
 
-# Définir les permissions des logs
-chmod -R 755 logs
+# ==========================================
+# GESTION DES PERMISSIONS DES LOGS
+# ==========================================
+log_info "Configuration des permissions des logs..."
+
+# Supprimer les anciens logs si nécessaire (ils seront recréés par Docker)
+if [ -d "logs/nginx" ]; then
+    # Essayer de nettoyer les anciens logs avec sudo si nécessaire
+    if [ "$(ls -A logs/nginx 2>/dev/null)" ]; then
+        log_warn "Anciens logs détectés, nettoyage..."
+        sudo rm -f logs/nginx/*.log 2>/dev/null || true
+    fi
+fi
+
+# Créer le dossier logs avec les bonnes permissions
+mkdir -p logs/nginx
+chmod 755 logs 2>/dev/null || sudo chmod 755 logs
+chmod 755 logs/nginx 2>/dev/null || sudo chmod 755 logs/nginx
+
+log_info "✅ Permissions des logs configurées"
 
 # Arrêter les conteneurs existants
 log_info "Arrêt des conteneurs existants..."
