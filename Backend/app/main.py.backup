@@ -52,39 +52,11 @@ posts = load_posts()
 # ==========================================
 # FONCTION HTTPS
 # ==========================================
-# def https_url_for(request: Request, name: str, **path_params: any) -> str:
-#     """Convertir les URLs HTTP en HTTPS"""
-#     http_url = request.url_for(name, **path_params)
-#     https_url = str(http_url).replace("http", "https", 1)
-#     return https_url
-
 def https_url_for(request: Request, name: str, **path_params: any) -> str:
-    """
-    Génère des URLs adaptées à l'environnement Docker.
-    Détecte automatiquement si on est derrière un reverse proxy.
-    """
-    try:
-        http_url = request.url_for(name, **path_params)
-        url_str = str(http_url)
-        
-        # Vérifier si on est derrière un reverse proxy (header X-Forwarded-Proto)
-        forwarded_proto = request.headers.get('x-forwarded-proto', '')
-        
-        # Si le proxy indique HTTPS, utiliser HTTPS
-        if forwarded_proto == 'https':
-            url_str = url_str.replace("http://", "https://", 1)
-        
-        # Sinon, vérifier l'environnement
-        elif os.getenv("ENVIRONMENT", "development").lower() == "production":
-            url_str = url_str.replace("http://", "https://", 1)
-        
-        return url_str
-        
-    except Exception as e:
-        print(f"❌ Error in https_url_for: {e}")
-        # Fallback : chemin relatif
-        return f"/static/{path_params.get('path', '')}"
-
+    """Convertir les URLs HTTP en HTTPS"""
+    http_url = request.url_for(name, **path_params)
+    https_url = str(http_url).replace("http", "https", 1)
+    return https_url
 
 # ==========================================
 # CRÉATION DE L'APPLICATION FASTAPI
@@ -295,6 +267,7 @@ async def formation(request: Request):
         "current": "formation"
     })
 
+<<<<<<< HEAD
 @app.get("/carrieres/environnementdetravail", response_class=HTMLResponse)
 async def quote(request: Request):
     return templates.TemplateResponse("environnementdetravail.html", {"request":request, "current":"environnementdetravail"})
@@ -322,7 +295,7 @@ async def ping():
         "message": "pong",
         "timestamp": datetime.now().isoformat()
     }
-
+=======
 @app.get("/carrieres/environnementdetravail", response_class=HTMLResponse, tags=["Carrières"])
 async def environnement_travail(request: Request):
     """Page Environnement de Travail"""
@@ -384,3 +357,4 @@ async def startup_event():
 async def shutdown_event():
     """Événement à l'arrêt de l'application"""
     logger.info("🛑 Arrêt de Mahrasoft.com")
+>>>>>>> 1b5f2ea42dc0d8a20904cfb3ec46996b57fbf3b3
