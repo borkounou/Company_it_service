@@ -52,11 +52,39 @@ posts = load_posts()
 # ==========================================
 # FONCTION HTTPS
 # ==========================================
+# def https_url_for(request: Request, name: str, **path_params: any) -> str:
+#     """Convertir les URLs HTTP en HTTPS"""
+#     http_url = request.url_for(name, **path_params)
+#     https_url = str(http_url).replace("http", "https", 1)
+#     return https_url
+
 def https_url_for(request: Request, name: str, **path_params: any) -> str:
-    """Convertir les URLs HTTP en HTTPS"""
-    http_url = request.url_for(name, **path_params)
-    https_url = str(http_url).replace("http", "https", 1)
-    return https_url
+    """
+    Génère des URLs adaptées à l'environnement Docker.
+    Détecte automatiquement si on est derrière un reverse proxy.
+    """
+    try:
+        http_url = request.url_for(name, **path_params)
+        url_str = str(http_url)
+        
+        # Vérifier si on est derrière un reverse proxy (header X-Forwarded-Proto)
+        forwarded_proto = request.headers.get('x-forwarded-proto', '')
+        
+        # Si le proxy indique HTTPS, utiliser HTTPS
+        if forwarded_proto == 'https':
+            url_str = url_str.replace("http://", "https://", 1)
+        
+        # Sinon, vérifier l'environnement
+        elif os.getenv("ENVIRONMENT", "development").lower() == "production":
+            url_str = url_str.replace("http://", "https://", 1)
+        
+        return url_str
+        
+    except Exception as e:
+        print(f"❌ Error in https_url_for: {e}")
+        # Fallback : chemin relatif
+        return f"/static/{path_params.get('path', '')}"
+
 
 # ==========================================
 # CRÉATION DE L'APPLICATION FASTAPI
