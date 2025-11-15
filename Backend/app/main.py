@@ -267,7 +267,6 @@ async def formation(request: Request):
         "current": "formation"
     })
 
-<<<<<<< HEAD
 @app.get("/carrieres/environnementdetravail", response_class=HTMLResponse)
 async def quote(request: Request):
     return templates.TemplateResponse("environnementdetravail.html", {"request":request, "current":"environnementdetravail"})
@@ -295,7 +294,7 @@ async def ping():
         "message": "pong",
         "timestamp": datetime.now().isoformat()
     }
-=======
+
 @app.get("/carrieres/environnementdetravail", response_class=HTMLResponse, tags=["Carrières"])
 async def environnement_travail(request: Request):
     """Page Environnement de Travail"""
@@ -357,4 +356,3 @@ async def startup_event():
 async def shutdown_event():
     """Événement à l'arrêt de l'application"""
     logger.info("🛑 Arrêt de Mahrasoft.com")
->>>>>>> 1b5f2ea42dc0d8a20904cfb3ec46996b57fbf3b3
