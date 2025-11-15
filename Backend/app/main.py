@@ -3,7 +3,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse 
 import json
-
+from datetime import datetime
+from fastapi.middleware.cors import CORSMiddleware
+import logging
+import os
 # def https_url_for(request:Request, name:str, **path_params:any)->str:
 #     http_url = request.url_for(name, **path_params)
 #     https_url =str(http_url).replace("http", "https", 1)
@@ -22,11 +25,47 @@ def https_url_for(request:Request, name:str, **path_params:any)->str:
     return https_url#request.url_for(name, **path_params)
 
 
-app = FastAPI()
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Créer l'application FastAPI
+app = FastAPI(
+    title="Mahrasoft.com API",
+    description="API pour le site web Mahrasoft Innovations",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
+
 app.mount("/static", StaticFiles(directory="./static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 templates.env.globals["https_url_for"] = https_url_for
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = datetime.now()
+    response = await call_next(request)
+    process_time = (datetime.now() - start_time).total_seconds()
+    
+    logger.info(
+        f"{request.method} {request.url.path} "
+        f"- Status: {response.status_code} "
+        f"- Time: {process_time:.3f}s"
+    )
+    
+    return response
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
