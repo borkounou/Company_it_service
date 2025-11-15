@@ -49,14 +49,6 @@ def load_posts():
 
 posts = load_posts()
 
-# ==========================================
-# FONCTION HTTPS
-# ==========================================
-# def https_url_for(request: Request, name: str, **path_params: any) -> str:
-#     """Convertir les URLs HTTP en HTTPS"""
-#     http_url = request.url_for(name, **path_params)
-#     https_url = str(http_url).replace("http", "https", 1)
-#     return https_url
 
 def https_url_for(request: Request, name: str, **path_params: any) -> str:
     """
