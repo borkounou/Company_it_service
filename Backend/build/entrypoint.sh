@@ -44,7 +44,7 @@ log_info "📁 Creating necessary directories..."
 
 # Répertoires pour les uploads et fichiers statiques
 UPLOAD_DIRS=(
-  "/mahrasoft-app/uploads/images"
+  "/mahrasoft-app/uploads/img"
   "/mahrasoft-app/uploads/documents"
   "/mahrasoft-app/uploads/media"
   "/mahrasoft-app/uploads/temp"

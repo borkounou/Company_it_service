@@ -328,3 +328,4 @@ async def startup_event():
 async def shutdown_event():
     """Événement à l'arrêt de l'application"""
     logger.info("🛑 Arrêt de Mahrasoft.com")
+    logger.info("🛑 Arrêt de Mahrasoft.com")
