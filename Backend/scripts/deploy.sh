@@ -116,16 +116,74 @@ if [ ! -f "Backend/nginx/ssl/cert.pem" ] || [ ! -f "Backend/nginx/ssl/key.pem" ]
     fi
 fi
 
-# Créer les dossiers nécessaires
+# ==========================================
+# CRÉATION DES DOSSIERS AVEC GESTION DES PERMISSIONS
+# ==========================================
 log_info "Création des dossiers nécessaires..."
+
+# Créer le dossier logs local
 mkdir -p logs/nginx
-mkdir -p /mnt/storage/docker/mahrasoft/uploads
-mkdir -p /mnt/storage/docker/mahrasoft/static
 mkdir -p Backend/nginx/ssl
 
-# Définir les permissions
-log_info "Configuration des permissions..."
-chmod -R 755 /mnt/storage/docker/mahrasoft
+# Définir le chemin de stockage
+STORAGE_PATH="/mnt/storage/docker/mahrasoft"
+
+# Vérifier si /mnt/storage existe
+if [ ! -d "/mnt/storage" ]; then
+    log_warn "Le dossier /mnt/storage n'existe pas"
+    echo ""
+    echo "Choisissez une option :"
+    echo "1) Créer /mnt/storage avec sudo (recommandé)"
+    echo "2) Utiliser un chemin alternatif (~/docker/mahrasoft)"
+    echo ""
+    read -p "Votre choix (1 ou 2) : " storage_choice
+    
+    case $storage_choice in
+        1)
+            log_info "Création de /mnt/storage avec sudo..."
+            sudo mkdir -p /mnt/storage/docker/mahrasoft/uploads
+            sudo mkdir -p /mnt/storage/docker/mahrasoft/static
+            sudo chown -R $USER:$USER /mnt/storage/docker/mahrasoft
+            sudo chmod -R 755 /mnt/storage/docker/mahrasoft
+            log_info "✅ Dossiers créés dans /mnt/storage"
+            ;;
+        2)
+            STORAGE_PATH="$HOME/docker/mahrasoft"
+            log_info "Utilisation du chemin: $STORAGE_PATH"
+            mkdir -p $STORAGE_PATH/uploads
+            mkdir -p $STORAGE_PATH/static
+            chmod -R 755 $STORAGE_PATH
+            log_info "✅ Dossiers créés dans $STORAGE_PATH"
+            
+            # Mettre à jour docker-compose.yml
+            log_warn "⚠️  Vous devez mettre à jour docker-compose.yml avec le nouveau chemin:"
+            log_warn "   Remplacez /mnt/storage/docker/mahrasoft par $STORAGE_PATH"
+            ;;
+        *)
+            log_error "Choix invalide"
+            exit 1
+            ;;
+    esac
+else
+    # /mnt/storage existe, créer les sous-dossiers
+    if [ -w "/mnt/storage" ]; then
+        # L'utilisateur a les permissions d'écriture
+        mkdir -p /mnt/storage/docker/mahrasoft/uploads
+        mkdir -p /mnt/storage/docker/mahrasoft/static
+        chmod -R 755 /mnt/storage/docker/mahrasoft
+        log_info "✅ Dossiers créés dans /mnt/storage"
+    else
+        # Besoin de sudo
+        log_warn "Permissions sudo nécessaires pour /mnt/storage"
+        sudo mkdir -p /mnt/storage/docker/mahrasoft/uploads
+        sudo mkdir -p /mnt/storage/docker/mahrasoft/static
+        sudo chown -R $USER:$USER /mnt/storage/docker/mahrasoft
+        sudo chmod -R 755 /mnt/storage/docker/mahrasoft
+        log_info "✅ Dossiers créés dans /mnt/storage (avec sudo)"
+    fi
+fi
+
+# Définir les permissions des logs
 chmod -R 755 logs
 
 # Arrêter les conteneurs existants
@@ -224,5 +282,6 @@ echo "   - Stats:                docker stats"
 echo "   - Test health:          curl -k https://localhost/health"
 echo "   - Mise à jour:          ./Backend/scripts/update.sh"
 echo ""
+log_info "📁 Chemin de stockage utilisé: $STORAGE_PATH"
 log_info "🎉 Votre site web Mahrasoft.com est maintenant en ligne !"
 echo ""
