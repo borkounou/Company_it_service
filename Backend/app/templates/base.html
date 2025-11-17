@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
     <title>{% block head_title %}Mahrasoft Innovations - Solutions IT au Tchad{% endblock %}</title>
     <meta name="description" content="Mahrasoft Innovations - Leader des Services Numériques au Tchad. Numérisation d'archives, développement logiciel, analyse de données, formations professionnelles et transformation digitale.">
     <meta name="keywords" content="Mahrasoft Innovations, solutions IT Tchad, numérisation archives, développement logiciel, e-learning Tchad, formation professionnelle, transformation digitale Afrique, Mahrasouk, Mahrasoft Academia">
@@ -377,6 +377,232 @@
         }
 
         /* ============================================================================
+           NAVBAR MOBILE OPTIMISÉE
+           ============================================================================ */
+        @media (max-width: 991px) {
+            .topbar {
+                display: none;
+            }
+
+            .navbar-modern {
+                padding: 0.75rem 0;
+                background: rgba(255, 255, 255, 0.98) !important;
+                backdrop-filter: blur(30px);
+            }
+
+            .navbar-brand-modern {
+                gap: 0.75rem;
+            }
+
+            .navbar-brand-modern img {
+                height: 45px;
+            }
+
+            .brand-name {
+                font-size: 1.25rem;
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+                background: transparent;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--radius-md);
+                transition: all var(--transition-base);
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+                background: var(--gray-100);
+            }
+
+            .navbar-toggler-icon {
+                background-image: none;
+                position: relative;
+                width: 24px;
+                height: 2px;
+                background: var(--primary-blue);
+                transition: all var(--transition-base);
+            }
+
+            .navbar-toggler-icon::before,
+            .navbar-toggler-icon::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 24px;
+                height: 2px;
+                background: var(--primary-blue);
+                transition: all var(--transition-base);
+            }
+
+            .navbar-toggler-icon::before {
+                top: -8px;
+            }
+
+            .navbar-toggler-icon::after {
+                top: 8px;
+            }
+
+            .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+                background: transparent;
+            }
+
+            .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            /* Menu mobile élégant */
+            .navbar-collapse {
+                background: var(--white);
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-2xl);
+                margin-top: 1rem;
+                padding: 1.5rem;
+                border: 1px solid var(--gray-200);
+                animation: slideDown 0.3s ease;
+            }
+
+            .navbar-nav {
+                gap: 0.5rem;
+            }
+
+            .nav-link-modern {
+                padding: 1rem 1.25rem !important;
+                font-size: 1.1rem;
+                border-radius: var(--radius-md);
+                margin: 0.25rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .nav-link-modern::before {
+                display: none;
+            }
+
+            .nav-link-modern:hover,
+            .nav-link-modern.active {
+                background: var(--gradient-primary);
+                color: var(--white) !important;
+                transform: translateX(8px);
+            }
+
+            /* Dropdown mobile amélioré */
+            .dropdown-menu-modern {
+                border: none;
+                box-shadow: none;
+                background: var(--gray-50);
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+                border-radius: var(--radius-md);
+                animation: none;
+            }
+
+            .dropdown-item-modern {
+                padding: 0.875rem 1.25rem;
+                font-size: 1rem;
+                border-radius: 0;
+                margin: 0.125rem 0;
+            }
+
+            .dropdown-item-modern:hover {
+                background: var(--primary-blue);
+                color: var(--white);
+                transform: none;
+            }
+
+            /* Bouton mobile */
+            .btn-primary-gradient {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            /* Indicateur dropdown mobile */
+            .dropdown-toggle::after {
+                margin-left: auto;
+                transition: transform var(--transition-base);
+            }
+
+            .dropdown-toggle[aria-expanded="true"]::after {
+                transform: rotate(180deg);
+            }
+
+            .section-heading {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation d'ouverture du menu mobile */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Améliorations pour très petits écrans */
+        @media (max-width: 576px) {
+            .navbar-brand-modern {
+                gap: 0.5rem;
+            }
+
+            .navbar-brand-modern img {
+                height: 40px;
+            }
+
+            .brand-name {
+                font-size: 1.1rem;
+            }
+
+            .navbar-collapse {
+                margin: 0.75rem -1rem;
+                border-radius: 0;
+                padding: 1rem;
+            }
+
+            .nav-link-modern {
+                padding: 0.875rem 1rem !important;
+                font-size: 1rem;
+            }
+
+            .section-heading {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Amélioration de l'accessibilité tactile */
+        @media (max-width: 991px) {
+            .nav-link-modern,
+            .dropdown-item-modern,
+            .navbar-toggler {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+
+        /* ============================================================================
            SECTIONS ET CONTENEURS
            ============================================================================ */
         .section-modern {
@@ -543,31 +769,9 @@
         }
 
         /* ============================================================================
-           RESPONSIVE
+           RESPONSIVE GÉNÉRAL
            ============================================================================ */
-        @media (max-width: 991px) {
-            .topbar {
-                display: none;
-            }
-
-            .section-heading {
-                font-size: 2rem;
-            }
-
-            .navbar-brand-modern img {
-                height: 40px;
-            }
-
-            .brand-tagline {
-                display: none;
-            }
-        }
-
         @media (max-width: 767px) {
-            .section-heading {
-                font-size: 1.75rem;
-            }
-
             .section-modern {
                 padding: var(--spacing-xl) 0;
             }
@@ -589,6 +793,18 @@
 
         .fade-in-up {
             animation: fadeInUp 0.6s ease;
+        }
+
+        /* ============================================================================
+           BOUTON BACK TO TOP
+           ============================================================================ */
+        #backToTop {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
         }
     </style>
 
@@ -655,7 +871,8 @@
                     <div class="brand-tagline">Innovations pour l'Afrique</div>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -676,7 +893,8 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['valeurs', 'clients', 'strategie'] %}active{% endif %}" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['valeurs', 'clients', 'strategie'] %}active{% endif %}" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
                             Découvrir
                         </a>
                         <ul class="dropdown-menu dropdown-menu-modern">
@@ -692,7 +910,8 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['rechercherpostuler'] %}active{% endif %}" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link-modern dropdown-toggle {% if current in ['rechercherpostuler'] %}active{% endif %}" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
                             Carrières
                         </a>
                         <ul class="dropdown-menu dropdown-menu-modern">
@@ -801,7 +1020,7 @@
     {% endblock %}
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary-gradient position-fixed bottom-0 end-0 m-4 rounded-circle d-none" id="backToTop" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+    <a href="#" class="btn btn-primary-gradient position-fixed bottom-0 end-0 m-4 rounded-circle d-none" id="backToTop">
         <i class="bi bi-arrow-up"></i>
     </a>
 
@@ -820,7 +1039,9 @@
 
         // Cacher le spinner après le chargement
         window.addEventListener('load', function() {
-            document.getElementById('spinner').classList.add('hide');
+            setTimeout(function() {
+                document.getElementById('spinner').classList.add('hide');
+            }, 500);
         });
 
         // Navbar scroll effect
@@ -850,6 +1071,74 @@
             if(link.getAttribute('href') === currentLocation) {
                 link.classList.add('active');
             }
+        });
+
+        // Améliorations pour le mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            // Fermer le menu mobile en cliquant à l'extérieur
+            document.addEventListener('click', function(e) {
+                if (navbarCollapse.classList.contains('show') && 
+                    !navbarToggler.contains(e.target) && 
+                    !navbarCollapse.contains(e.target)) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
+                }
+            });
+            
+            // Fermer le menu mobile après clic sur un lien (sauf dropdowns)
+            const navLinks = document.querySelectorAll('.nav-link-modern:not(.dropdown-toggle)');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+            
+            // Animation fluide pour les dropdowns mobiles
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    if (window.innerWidth < 992) {
+                        e.preventDefault();
+                        const dropdownMenu = this.nextElementSibling;
+                        const isOpen = dropdownMenu.classList.contains('show');
+                        
+                        // Fermer tous les autres dropdowns
+                        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                            if (menu !== dropdownMenu) {
+                                menu.classList.remove('show');
+                            }
+                        });
+                        
+                        // Basculer l'état actuel
+                        if (!isOpen) {
+                            dropdownMenu.classList.add('show');
+                        } else {
+                            dropdownMenu.classList.remove('show');
+                        }
+                    }
+                });
+            });
+            
+            // Fermer les dropdowns en cliquant ailleurs sur mobile
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth < 992) {
+                    if (!e.target.closest('.dropdown')) {
+                        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                            menu.classList.remove('show');
+                        });
+                    }
+                }
+            });
         });
     </script>
 
